@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MDAL driver implementation tutorial &mdash; MDAL  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/mdal.css" type="text/css" />
+    <link rel="canonical" href="https://mdal.xyztutorials/add_driver_tut.html"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Development" href="../development/index.html" />
+    <link rel="prev" title="Tutorials" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+            <a href="../index.html">
+            <img src="../_static/LogoHorizontal_01_color_400x123.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../programs/index.html">Programs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../drivers/index.html">MDAL drivers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/index.html">User</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Tutorials</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#drivers">Drivers</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">MDAL driver implementation tutorial</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overall-approach">Overall Approach</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#driver-structure">Driver structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#regular-drivers">Regular drivers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dynamic-drivers">Dynamic drivers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../development/index.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../community.html">Community</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">How to contribute?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: white" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MDAL</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Tutorials</a> &raquo;</li>
+      <li>MDAL driver implementation tutorial</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/lutraconsulting/mdal/edit//master/docs/source/tutorials/add_driver_tut.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="index.html" class="btn btn-neutral float-left" title="Tutorials" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../development/index.html" class="btn btn-neutral float-right" title="Development" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mdal-driver-implementation-tutorial">
+<span id="add-driver-tut"></span><h1>MDAL driver implementation tutorial<a class="headerlink" href="#mdal-driver-implementation-tutorial" title="Permalink to this headline"></a></h1>
+<section id="overall-approach">
+<h2>Overall Approach<a class="headerlink" href="#overall-approach" title="Permalink to this headline"></a></h2>
+<p>In general new formats are added to MDAL by implementing format specific drivers. Drivers
+need to be derived class of <cite>MDAL::Driver()</cite> and be registered in <cite>MDAL::DriverManager::DriverManager()</cite>.
+Drivers can have different types, they can read (or write) the mesh frame or mesh datasets (or both).
+Some formats have separate file for mesh (frame) definition and data definition, some formats have multiple files per dataset,
+some formats use single for to store all the data in single file. All possibilities are supported.</p>
+</section>
+<section id="driver-structure">
+<h2>Driver structure<a class="headerlink" href="#driver-structure" title="Permalink to this headline"></a></h2>
+<p>There are two types of drivers in MDAL</p>
+<ol class="upperalpha simple">
+<li><p>Regular drivers: they are compiled into the MDAL library at compile time</p></li>
+<li><p>Dynamic drivers: they are compiled separately, without linkage to MDAL library.
+MDAL loads the on runtime from folder defined by environment variable <cite>MDAL_DRIVER_PATH</cite></p></li>
+</ol>
+</section>
+<section id="regular-drivers">
+<h2>Regular drivers<a class="headerlink" href="#regular-drivers" title="Permalink to this headline"></a></h2>
+<p>Each regular MDAL driver consists of files in</p>
+<ol class="arabic simple">
+<li><p>MDAL/docs/source/drivers/&lt;driver_name&gt;.rst where the driver documentation is preserved</p></li>
+<li><p>MDAL/mdal/frmts/mdal_&lt;driver_name&gt;.cpp where the driver implementation is coded</p></li>
+<li><p>MDAL/tests/test_&lt;driver_name&gt;.cpp where the test is implemented.
+Test coverage is aimed for more than 90% of the code base.
+Each driver should come with the driver test with size &lt; 3MB that is stored under the same folder.</p></li>
+</ol>
+<p>The new driver needs to also be registered in <cite>mdal_driver_manager.cpp</cite> file.</p>
+<p>The driver can be implemented with lazy-loaded fashion,
+so the data is gathered only when requested (preferred) or in brute-force way,
+where everything is loaded in the memory. The latter options is easier to
+implement as is a usual practice to implement the all-in-memory way by usage of
+classes <cite>MDAL::MemoryMesh</cite> and <cite>MDAL::MemoryDataset</cite> first.</p>
+</section>
+<section id="dynamic-drivers">
+<h2>Dynamic drivers<a class="headerlink" href="#dynamic-drivers" title="Permalink to this headline"></a></h2>
+<p>Implementation of the dynamic drivers is a lot more challenging than the regular drivers. To be able to
+guarantee the binary stability, dynamic drivers needs to expose plain C API with set of exported functions.</p>
+<p>The example implementation of the dynamic driver is in <cite>MDAL/tools/externaldriver/</cite>. Basically you need to
+implement and export all functions defined in <cite>MDAL/tools/externaldriver/mdal_external_driver.h</cite>.
+Please consult the functions description.</p>
+<p>The dynamic driver should not link MDAL library function, so it is not dependent on the version of the library.
+Also, with the new release of MDAL you do not need to recompile your drive to be able to use it.</p>
+<p>On runtime, MDAL scans the folder defined by environment variable <cite>MDAL_DRIVER_PATH</cite>
+and scans all libraries found in the folder. If any library contains the required <cite>MDAL_DRIVER_*</cite>
+symbols, it is registered in runtime to mdal driver registry.</p>
+<p>When the mesh is opened in MDAL, it tries <cite>MDAL_DRIVER_canReadMesh()</cite> function of the driver to
+find out if the driver shall be used to open the file.</p>
+<p>The reading follows by calling <cite>MDAL_DRIVER_M_*</cite> functions to get the information and structure of
+the mesh frame.</p>
+<p>Afterwards, the dataset groups are read by <cite>MDAL_DRIVER_G_*</cite> functions.</p>
+<p>When client requests particular data, they are served through <cite>MDAL_DRIVER_D_data</cite>. Data could be lazy-loaded.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Tutorials" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../development/index.html" class="btn btn-neutral float-right" title="Development" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2020.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

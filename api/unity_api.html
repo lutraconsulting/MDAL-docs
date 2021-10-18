@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MDAL Unity API &mdash; MDAL  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/mdal.css" type="text/css" />
+    <link rel="canonical" href="https://mdal.xyzapi/unity_api.html"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+            <a href="../index.html">
+            <img src="../_static/LogoHorizontal_01_color_400x123.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../programs/index.html">Programs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../drivers/index.html">MDAL drivers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/index.html">User</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development/index.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../community.html">Community</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">How to contribute?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: white" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MDAL</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>MDAL Unity API</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/lutraconsulting/mdal/edit//master/docs/source/api/unity_api.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mdal-unity-api">
+<span id="unity-api"></span><h1>MDAL Unity API<a class="headerlink" href="#mdal-unity-api" title="Permalink to this headline"></a></h1>
+<p>The MDAL Unity integration allows you to access and manipulation geospatial mesh data sets in C# amd
+includes integration to access them as Unity objects (thought the Geometry3sharp to Unity integration)</p>
+<p>Currently, this integration can:</p>
+<ol class="arabic simple">
+<li><p>read all MDAL compatible file formats,</p></li>
+<li><p>access the metadata for the source,</p></li>
+<li><p>access the vertex, face and edge data,</p></li>
+<li><p>access ‘double’ datasets (both scalar and vector), and</p></li>
+<li><p>convert the MDAL source mesh into a <a class="reference external" href="https://github.com/gradientspace/geometry3Sharp">Geometry3sharp</a> DMesh3 mesh object.</p></li>
+</ol>
+<p>This version does not currently allow the MDAL source mesh to be written or ammended.</p>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h2>
+<p>Available as a Unity Package Manager package from <a class="reference external" href="https://openupm.com/">OpenUPM</a> :</p>
+<p><a class="reference external" href="https://openupm.com/packages/com.virgis.mdal/">https://openupm.com/packages/com.virgis.mdal/</a></p>
+</section>
+<section id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline"></a></h2>
+<p><a class="reference external" href="https://virgis-team.github.io/mdal-upm/html/annotated.html">https://virgis-team.github.io/mdal-upm/html/annotated.html</a></p>
+<section id="development">
+<h3>Development<a class="headerlink" href="#development" title="Permalink to this headline"></a></h3>
+<p>Submit issues and PRs to :</p>
+<p><a class="reference external" href="https://github.com/ViRGIS-Team/mdal-upm">https://github.com/ViRGIS-Team/mdal-upm</a></p>
+</section>
+</section>
+<section id="example-usage">
+<h2>Example Usage<a class="headerlink" href="#example-usage" title="Permalink to this headline"></a></h2>
+<div class="highlight-C# notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">Mdal</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">g3</span><span class="p">;</span>
+
+<span class="n">List</span><span class="p">&lt;</span><span class="n">DMesh3</span><span class="p">&gt;</span> <span class="n">features</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">DMesh3</span><span class="p">&gt;();</span>
+
+<span class="c1">// for MDAL files - load the mesh directly</span>
+<span class="n">ds</span> <span class="p">=</span> <span class="n">Datasource</span><span class="p">.</span><span class="n">Load</span><span class="p">(</span><span class="s">&quot;...SourceFileName&quot;</span><span class="p">);</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">ds</span><span class="p">.</span><span class="n">meshes</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
+    <span class="n">DMesh3</span> <span class="n">mesh</span> <span class="p">=</span> <span class="n">ds</span><span class="p">.</span><span class="n">GetMesh</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+    <span class="n">mesh</span><span class="p">.</span><span class="n">RemoveMetadata</span><span class="p">(</span><span class="s">&quot;properties&quot;</span><span class="p">);</span>
+    <span class="n">mesh</span><span class="p">.</span><span class="n">AttachMetadata</span><span class="p">(</span><span class="s">&quot;properties&quot;</span><span class="p">,</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;{</span>
+    <span class="p">{</span> <span class="s">&quot;Name&quot;</span><span class="p">,</span> <span class="n">ds</span><span class="p">.</span><span class="n">meshes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">}</span>
+<span class="p">});</span>
+    <span class="c1">// set the CRS based on what is known</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">proj</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">mesh</span><span class="p">.</span><span class="n">RemoveMetadata</span><span class="p">(</span><span class="s">&quot;CRS&quot;</span><span class="p">);</span>
+        <span class="n">mesh</span><span class="p">.</span><span class="n">AttachMetadata</span><span class="p">(</span><span class="s">&quot;CRS&quot;</span><span class="p">,</span> <span class="n">proj</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">layer</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="s">&quot;Crs&quot;</span><span class="p">)</span> <span class="p">&amp;&amp;</span> <span class="n">layer</span><span class="p">.</span><span class="n">Crs</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">mesh</span><span class="p">.</span><span class="n">RemoveMetadata</span><span class="p">(</span><span class="s">&quot;CRS&quot;</span><span class="p">);</span>
+        <span class="n">mesh</span><span class="p">.</span><span class="n">AttachMetadata</span><span class="p">(</span><span class="s">&quot;CRS&quot;</span><span class="p">,</span> <span class="n">layer</span><span class="p">.</span><span class="n">Crs</span><span class="p">);</span>
+    <span class="p">};</span>
+    <span class="n">features</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">mesh</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2020.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

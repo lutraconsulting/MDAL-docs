@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mdal.h: MDAL C API &mdash; MDAL  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/mdal.css" type="text/css" />
+    <link rel="canonical" href="https://mdal.xyzapi/mdal_c_api.html"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+            <a href="../index.html">
+            <img src="../_static/LogoHorizontal_01_color_400x123.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../programs/index.html">Programs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../drivers/index.html">MDAL drivers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/index.html">User</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development/index.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../community.html">Community</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">How to contribute?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: white" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MDAL</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>mdal.h: MDAL C API</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/lutraconsulting/mdal/edit//master/docs/source/api/mdal_c_api.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mdal-h-mdal-c-api">
+<span id="mdal-c-api"></span><h1>mdal.h: MDAL C API<a class="headerlink" href="#mdal-h-mdal-c-api" title="Permalink to this headline"></a></h1>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.MDAL_EXPORT">
+<span class="target" id="mdal_8h_1a134c60496922f7c39656eae0f8d6c4f4"></span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_EXPORT</span></span></span><a class="headerlink" href="#c.MDAL_EXPORT" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-typedefs">Typedefs</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv410MDAL_MeshH">
+<span id="_CPPv310MDAL_MeshH"></span><span id="_CPPv210MDAL_MeshH"></span><span id="MDAL_MeshH"></span><span class="target" id="mdal_8h_1ac3b92e4ea51ba4f5378729760b0bbef2"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_MeshH</span></span></span><a class="headerlink" href="#_CPPv410MDAL_MeshH" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv424MDAL_MeshVertexIteratorH">
+<span id="_CPPv324MDAL_MeshVertexIteratorH"></span><span id="_CPPv224MDAL_MeshVertexIteratorH"></span><span id="MDAL_MeshVertexIteratorH"></span><span class="target" id="mdal_8h_1a795001f94f5aa2265feb263ddd21eed0"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_MeshVertexIteratorH</span></span></span><a class="headerlink" href="#_CPPv424MDAL_MeshVertexIteratorH" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv422MDAL_MeshEdgeIteratorH">
+<span id="_CPPv322MDAL_MeshEdgeIteratorH"></span><span id="_CPPv222MDAL_MeshEdgeIteratorH"></span><span id="MDAL_MeshEdgeIteratorH"></span><span class="target" id="mdal_8h_1aabc4a903e2439c8e51bc8bc5b059b6db"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_MeshEdgeIteratorH</span></span></span><a class="headerlink" href="#_CPPv422MDAL_MeshEdgeIteratorH" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv422MDAL_MeshFaceIteratorH">
+<span id="_CPPv322MDAL_MeshFaceIteratorH"></span><span id="_CPPv222MDAL_MeshFaceIteratorH"></span><span id="MDAL_MeshFaceIteratorH"></span><span class="target" id="mdal_8h_1a954c5cade5377c8763f60eaf92bad5e6"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_MeshFaceIteratorH</span></span></span><a class="headerlink" href="#_CPPv422MDAL_MeshFaceIteratorH" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv418MDAL_DatasetGroupH">
+<span id="_CPPv318MDAL_DatasetGroupH"></span><span id="_CPPv218MDAL_DatasetGroupH"></span><span id="MDAL_DatasetGroupH"></span><span class="target" id="mdal_8h_1a80eacd1c91d6ad49dea6984032d824ce"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_DatasetGroupH</span></span></span><a class="headerlink" href="#_CPPv418MDAL_DatasetGroupH" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv413MDAL_DatasetH">
+<span id="_CPPv313MDAL_DatasetH"></span><span id="_CPPv213MDAL_DatasetH"></span><span id="MDAL_DatasetH"></span><span class="target" id="mdal_8h_1a452e26b5a7bdb282f5d29ba7cace4e50"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_DatasetH</span></span></span><a class="headerlink" href="#_CPPv413MDAL_DatasetH" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv412MDAL_DriverH">
+<span id="_CPPv312MDAL_DriverH"></span><span id="_CPPv212MDAL_DriverH"></span><span id="MDAL_DriverH"></span><span class="target" id="mdal_8h_1ac2615200b9781d0aa648b98484df7641"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_DriverH</span></span></span><a class="headerlink" href="#_CPPv412MDAL_DriverH" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv419MDAL_LoggerCallback">
+<span id="_CPPv319MDAL_LoggerCallback"></span><span id="_CPPv219MDAL_LoggerCallback"></span><span id="MDAL_LoggerCallback"></span><span class="target" id="mdal_8h_1ac3610243d1f30967080296a29b7b65bc"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_LoggerCallback</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="#_CPPv413MDAL_LogLevel" title="MDAL_LogLevel"><span class="n"><span class="pre">MDAL_LogLevel</span></span></a><span class="w"> </span><span class="n"><span class="pre">logLevel</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv411MDAL_Status" title="MDAL_Status"><span class="n"><span class="pre">MDAL_Status</span></span></a><span class="w"> </span><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv419MDAL_LoggerCallback" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-enums">Enums</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv411MDAL_Status">
+<span id="_CPPv311MDAL_Status"></span><span id="_CPPv211MDAL_Status"></span><span class="target" id="mdal_8h_1a940e24544e8a69f474e6113fb32051d9"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_Status</span></span></span><a class="headerlink" href="#_CPPv411MDAL_Status" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Statuses. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11MDAL_Status4NoneE">
+<span id="_CPPv3N11MDAL_Status4NoneE"></span><span id="_CPPv2N11MDAL_Status4NoneE"></span><span class="target" id="mdal_8h_1a940e24544e8a69f474e6113fb32051d9ac9d3e887722f2bc482bcca9d41c512af"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">None</span></span></span><a class="headerlink" href="#_CPPv4N11MDAL_Status4NoneE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11MDAL_Status19Err_NotEnoughMemoryE">
+<span id="_CPPv3N11MDAL_Status19Err_NotEnoughMemoryE"></span><span id="_CPPv2N11MDAL_Status19Err_NotEnoughMemoryE"></span><span class="target" id="mdal_8h_1a940e24544e8a69f474e6113fb32051d9a68b13f392379b0e00d06edc9c2b27d94"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Err_NotEnoughMemory</span></span></span><a class="headerlink" href="#_CPPv4N11MDAL_Status19Err_NotEnoughMemoryE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11MDAL_Status16Err_FileNotFoundE">
+<span id="_CPPv3N11MDAL_Status16Err_FileNotFoundE"></span><span id="_CPPv2N11MDAL_Status16Err_FileNotFoundE"></span><span class="target" id="mdal_8h_1a940e24544e8a69f474e6113fb32051d9a12f973c64c7115e37d8bdac868a0b07b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Err_FileNotFound</span></span></span><a class="headerlink" href="#_CPPv4N11MDAL_Status16Err_FileNotFoundE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11MDAL_Status17Err_UnknownFormatE">
+<span id="_CPPv3N11MDAL_Status17Err_UnknownFormatE"></span><span id="_CPPv2N11MDAL_Status17Err_UnknownFormatE"></span><span class="target" id="mdal_8h_1a940e24544e8a69f474e6113fb32051d9aa6fb17791b8f5195d669a7d0c15d8cb6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Err_UnknownFormat</span></span></span><a class="headerlink" href="#_CPPv4N11MDAL_Status17Err_UnknownFormatE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11MDAL_Status20Err_IncompatibleMeshE">
+<span id="_CPPv3N11MDAL_Status20Err_IncompatibleMeshE"></span><span id="_CPPv2N11MDAL_Status20Err_IncompatibleMeshE"></span><span class="target" id="mdal_8h_1a940e24544e8a69f474e6113fb32051d9a5f00eb7d2752a5a21f8ef94e09d78bd4"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Err_IncompatibleMesh</span></span></span><a class="headerlink" href="#_CPPv4N11MDAL_Status20Err_IncompatibleMeshE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11MDAL_Status15Err_InvalidDataE">
+<span id="_CPPv3N11MDAL_Status15Err_InvalidDataE"></span><span id="_CPPv2N11MDAL_Status15Err_InvalidDataE"></span><span class="target" id="mdal_8h_1a940e24544e8a69f474e6113fb32051d9ae6c764b57482d70d4b88df3ba031b746"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Err_InvalidData</span></span></span><a class="headerlink" href="#_CPPv4N11MDAL_Status15Err_InvalidDataE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11MDAL_Status23Err_IncompatibleDatasetE">
+<span id="_CPPv3N11MDAL_Status23Err_IncompatibleDatasetE"></span><span id="_CPPv2N11MDAL_Status23Err_IncompatibleDatasetE"></span><span class="target" id="mdal_8h_1a940e24544e8a69f474e6113fb32051d9aa0e2cea40c2665798efdc6949c9568b1"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Err_IncompatibleDataset</span></span></span><a class="headerlink" href="#_CPPv4N11MDAL_Status23Err_IncompatibleDatasetE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11MDAL_Status28Err_IncompatibleDatasetGroupE">
+<span id="_CPPv3N11MDAL_Status28Err_IncompatibleDatasetGroupE"></span><span id="_CPPv2N11MDAL_Status28Err_IncompatibleDatasetGroupE"></span><span class="target" id="mdal_8h_1a940e24544e8a69f474e6113fb32051d9a99a4f0f98c7ec62024de162e649f94dd"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Err_IncompatibleDatasetGroup</span></span></span><a class="headerlink" href="#_CPPv4N11MDAL_Status28Err_IncompatibleDatasetGroupE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11MDAL_Status17Err_MissingDriverE">
+<span id="_CPPv3N11MDAL_Status17Err_MissingDriverE"></span><span id="_CPPv2N11MDAL_Status17Err_MissingDriverE"></span><span class="target" id="mdal_8h_1a940e24544e8a69f474e6113fb32051d9a47d1c28719fc27b7a20bc4cbc0bc0504"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Err_MissingDriver</span></span></span><a class="headerlink" href="#_CPPv4N11MDAL_Status17Err_MissingDriverE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11MDAL_Status27Err_MissingDriverCapabilityE">
+<span id="_CPPv3N11MDAL_Status27Err_MissingDriverCapabilityE"></span><span id="_CPPv2N11MDAL_Status27Err_MissingDriverCapabilityE"></span><span class="target" id="mdal_8h_1a940e24544e8a69f474e6113fb32051d9a72e26e418fa3378532ef36020e4e5140"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Err_MissingDriverCapability</span></span></span><a class="headerlink" href="#_CPPv4N11MDAL_Status27Err_MissingDriverCapabilityE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11MDAL_Status21Err_FailToWriteToDiskE">
+<span id="_CPPv3N11MDAL_Status21Err_FailToWriteToDiskE"></span><span id="_CPPv2N11MDAL_Status21Err_FailToWriteToDiskE"></span><span class="target" id="mdal_8h_1a940e24544e8a69f474e6113fb32051d9a8f2e418caad86fad4186225d99075560"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Err_FailToWriteToDisk</span></span></span><a class="headerlink" href="#_CPPv4N11MDAL_Status21Err_FailToWriteToDiskE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11MDAL_Status22Err_UnsupportedElementE">
+<span id="_CPPv3N11MDAL_Status22Err_UnsupportedElementE"></span><span id="_CPPv2N11MDAL_Status22Err_UnsupportedElementE"></span><span class="target" id="mdal_8h_1a940e24544e8a69f474e6113fb32051d9a02c663f336c9ec73af23880fd7eeea8c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Err_UnsupportedElement</span></span></span><a class="headerlink" href="#_CPPv4N11MDAL_Status22Err_UnsupportedElementE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11MDAL_Status20Warn_InvalidElementsE">
+<span id="_CPPv3N11MDAL_Status20Warn_InvalidElementsE"></span><span id="_CPPv2N11MDAL_Status20Warn_InvalidElementsE"></span><span class="target" id="mdal_8h_1a940e24544e8a69f474e6113fb32051d9aa37af254c77dbd25f7aef14cc25b3167"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Warn_InvalidElements</span></span></span><a class="headerlink" href="#_CPPv4N11MDAL_Status20Warn_InvalidElementsE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11MDAL_Status27Warn_ElementWithInvalidNodeE">
+<span id="_CPPv3N11MDAL_Status27Warn_ElementWithInvalidNodeE"></span><span id="_CPPv2N11MDAL_Status27Warn_ElementWithInvalidNodeE"></span><span class="target" id="mdal_8h_1a940e24544e8a69f474e6113fb32051d9a1350e8f245fe14676eba865af353b42c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Warn_ElementWithInvalidNode</span></span></span><a class="headerlink" href="#_CPPv4N11MDAL_Status27Warn_ElementWithInvalidNodeE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11MDAL_Status21Warn_ElementNotUniqueE">
+<span id="_CPPv3N11MDAL_Status21Warn_ElementNotUniqueE"></span><span id="_CPPv2N11MDAL_Status21Warn_ElementNotUniqueE"></span><span class="target" id="mdal_8h_1a940e24544e8a69f474e6113fb32051d9a00e8f20dab87c878a08d324ae74ee2d4"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Warn_ElementNotUnique</span></span></span><a class="headerlink" href="#_CPPv4N11MDAL_Status21Warn_ElementNotUniqueE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11MDAL_Status18Warn_NodeNotUniqueE">
+<span id="_CPPv3N11MDAL_Status18Warn_NodeNotUniqueE"></span><span id="_CPPv2N11MDAL_Status18Warn_NodeNotUniqueE"></span><span class="target" id="mdal_8h_1a940e24544e8a69f474e6113fb32051d9a988536f602624aa31a51f4a72b056383"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Warn_NodeNotUnique</span></span></span><a class="headerlink" href="#_CPPv4N11MDAL_Status18Warn_NodeNotUniqueE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11MDAL_Status25Warn_MultipleMeshesInFileE">
+<span id="_CPPv3N11MDAL_Status25Warn_MultipleMeshesInFileE"></span><span id="_CPPv2N11MDAL_Status25Warn_MultipleMeshesInFileE"></span><span class="target" id="mdal_8h_1a940e24544e8a69f474e6113fb32051d9a9bd3b5fbd4bbe4020ec82abb408878ee"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Warn_MultipleMeshesInFile</span></span></span><a class="headerlink" href="#_CPPv4N11MDAL_Status25Warn_MultipleMeshesInFileE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv413MDAL_LogLevel">
+<span id="_CPPv313MDAL_LogLevel"></span><span id="_CPPv213MDAL_LogLevel"></span><span class="target" id="mdal_8h_1a7f4b707378911a908f4a5d0a5782dc97"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_LogLevel</span></span></span><a class="headerlink" href="#_CPPv413MDAL_LogLevel" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Log levels. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13MDAL_LogLevel5ErrorE">
+<span id="_CPPv3N13MDAL_LogLevel5ErrorE"></span><span id="_CPPv2N13MDAL_LogLevel5ErrorE"></span><span class="target" id="mdal_8h_1a7f4b707378911a908f4a5d0a5782dc97a4dfd42ec49d09d8c6555c218301cc30f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Error</span></span></span><a class="headerlink" href="#_CPPv4N13MDAL_LogLevel5ErrorE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13MDAL_LogLevel4WarnE">
+<span id="_CPPv3N13MDAL_LogLevel4WarnE"></span><span id="_CPPv2N13MDAL_LogLevel4WarnE"></span><span class="target" id="mdal_8h_1a7f4b707378911a908f4a5d0a5782dc97a86a4f5be1b42a6ee68eaeb357bbe065c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Warn</span></span></span><a class="headerlink" href="#_CPPv4N13MDAL_LogLevel4WarnE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13MDAL_LogLevel4InfoE">
+<span id="_CPPv3N13MDAL_LogLevel4InfoE"></span><span id="_CPPv2N13MDAL_LogLevel4InfoE"></span><span class="target" id="mdal_8h_1a7f4b707378911a908f4a5d0a5782dc97a1cd805eaf0bb58a90fe7e7e4cf6a3cdc"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Info</span></span></span><a class="headerlink" href="#_CPPv4N13MDAL_LogLevel4InfoE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13MDAL_LogLevel5DebugE">
+<span id="_CPPv3N13MDAL_LogLevel5DebugE"></span><span id="_CPPv2N13MDAL_LogLevel5DebugE"></span><span class="target" id="mdal_8h_1a7f4b707378911a908f4a5d0a5782dc97ac909e86054cb6ad83c22bfc2b3e6e5b8"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Debug</span></span></span><a class="headerlink" href="#_CPPv4N13MDAL_LogLevel5DebugE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv417MDAL_DataLocation">
+<span id="_CPPv317MDAL_DataLocation"></span><span id="_CPPv217MDAL_DataLocation"></span><span class="target" id="mdal_8h_1abb0f747d4525c57613b056fed6706546"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_DataLocation</span></span></span><a class="headerlink" href="#_CPPv417MDAL_DataLocation" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Specifies where the data is defined. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N17MDAL_DataLocation19DataInvalidLocationE">
+<span id="_CPPv3N17MDAL_DataLocation19DataInvalidLocationE"></span><span id="_CPPv2N17MDAL_DataLocation19DataInvalidLocationE"></span><span class="target" id="mdal_8h_1abb0f747d4525c57613b056fed6706546a3be8f7dc57ac4e76471ad63fe52cc3b6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DataInvalidLocation</span></span></span><a class="headerlink" href="#_CPPv4N17MDAL_DataLocation19DataInvalidLocationE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Unknown/Invalid location. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N17MDAL_DataLocation14DataOnVerticesE">
+<span id="_CPPv3N17MDAL_DataLocation14DataOnVerticesE"></span><span id="_CPPv2N17MDAL_DataLocation14DataOnVerticesE"></span><span class="target" id="mdal_8h_1abb0f747d4525c57613b056fed6706546a6e9497e8d2196a2ae58d3a396ce16302"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DataOnVertices</span></span></span><a class="headerlink" href="#_CPPv4N17MDAL_DataLocation14DataOnVerticesE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Data is defined on vertices of 1D or 2D mesh. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N17MDAL_DataLocation11DataOnFacesE">
+<span id="_CPPv3N17MDAL_DataLocation11DataOnFacesE"></span><span id="_CPPv2N17MDAL_DataLocation11DataOnFacesE"></span><span class="target" id="mdal_8h_1abb0f747d4525c57613b056fed6706546a18610c35713f9183db607d179357067a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DataOnFaces</span></span></span><a class="headerlink" href="#_CPPv4N17MDAL_DataLocation11DataOnFacesE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Data is defined on face centres of 2D mesh. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N17MDAL_DataLocation13DataOnVolumesE">
+<span id="_CPPv3N17MDAL_DataLocation13DataOnVolumesE"></span><span id="_CPPv2N17MDAL_DataLocation13DataOnVolumesE"></span><span class="target" id="mdal_8h_1abb0f747d4525c57613b056fed6706546aaf6ee109798e3cb8b2362a39a7ddf463"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DataOnVolumes</span></span></span><a class="headerlink" href="#_CPPv4N17MDAL_DataLocation13DataOnVolumesE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Data is defined on volume centres of 3D mesh. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N17MDAL_DataLocation11DataOnEdgesE">
+<span id="_CPPv3N17MDAL_DataLocation11DataOnEdgesE"></span><span id="_CPPv2N17MDAL_DataLocation11DataOnEdgesE"></span><span class="target" id="mdal_8h_1abb0f747d4525c57613b056fed6706546ad0994a36f730ce5fae6abb6067c12985"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DataOnEdges</span></span></span><a class="headerlink" href="#_CPPv4N17MDAL_DataLocation11DataOnEdgesE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Data is defined on edges of 1D mesh. </p>
+<p><dl class="simple">
+<dt><strong>Since</strong></dt><dd><p>MDAL 0.6.0 </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv413MDAL_DataType">
+<span id="_CPPv313MDAL_DataType"></span><span id="_CPPv213MDAL_DataType"></span><span class="target" id="mdal_8h_1a166f0313ba7ed0283008e91051fa3992"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_DataType</span></span></span><a class="headerlink" href="#_CPPv413MDAL_DataType" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Data type to be returned by MDAL_D_data. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13MDAL_DataType13SCALAR_DOUBLEE">
+<span id="_CPPv3N13MDAL_DataType13SCALAR_DOUBLEE"></span><span id="_CPPv2N13MDAL_DataType13SCALAR_DOUBLEE"></span><span class="target" id="mdal_8h_1a166f0313ba7ed0283008e91051fa3992a111fa7a1eb188d72cd669ee1775985de"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SCALAR_DOUBLE</span></span></span><a class="headerlink" href="#_CPPv4N13MDAL_DataType13SCALAR_DOUBLEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Double value for scalar datasets (DataOnVertices or DataOnFaces or DataOnEdges) </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13MDAL_DataType16VECTOR_2D_DOUBLEE">
+<span id="_CPPv3N13MDAL_DataType16VECTOR_2D_DOUBLEE"></span><span id="_CPPv2N13MDAL_DataType16VECTOR_2D_DOUBLEE"></span><span class="target" id="mdal_8h_1a166f0313ba7ed0283008e91051fa3992aacb292c401f62e59cb04327d8753ddbc"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VECTOR_2D_DOUBLE</span></span></span><a class="headerlink" href="#_CPPv4N13MDAL_DataType16VECTOR_2D_DOUBLEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Double, double value for vector datasets (DataOnVertices or DataOnFaces or DataOnEdges) </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13MDAL_DataType14ACTIVE_INTEGERE">
+<span id="_CPPv3N13MDAL_DataType14ACTIVE_INTEGERE"></span><span id="_CPPv2N13MDAL_DataType14ACTIVE_INTEGERE"></span><span class="target" id="mdal_8h_1a166f0313ba7ed0283008e91051fa3992a45593f7ff9a5f51649dc6412bdbf5762"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ACTIVE_INTEGER</span></span></span><a class="headerlink" href="#_CPPv4N13MDAL_DataType14ACTIVE_INTEGERE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Integer, active flag for dataset faces. Some formats support switching off the element for particular timestep (see MDAL_D_hasActiveFlagCapability) </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13MDAL_DataType28VERTICAL_LEVEL_COUNT_INTEGERE">
+<span id="_CPPv3N13MDAL_DataType28VERTICAL_LEVEL_COUNT_INTEGERE"></span><span id="_CPPv2N13MDAL_DataType28VERTICAL_LEVEL_COUNT_INTEGERE"></span><span class="target" id="mdal_8h_1a166f0313ba7ed0283008e91051fa3992acdb1e90b83d994d6975a351ac3054cca"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VERTICAL_LEVEL_COUNT_INTEGER</span></span></span><a class="headerlink" href="#_CPPv4N13MDAL_DataType28VERTICAL_LEVEL_COUNT_INTEGERE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Number of vertical level for particular mesh’s face in 3D Stacked Meshes (DataOnVolumes) </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13MDAL_DataType21VERTICAL_LEVEL_DOUBLEE">
+<span id="_CPPv3N13MDAL_DataType21VERTICAL_LEVEL_DOUBLEE"></span><span id="_CPPv2N13MDAL_DataType21VERTICAL_LEVEL_DOUBLEE"></span><span class="target" id="mdal_8h_1a166f0313ba7ed0283008e91051fa3992a0187e14112b0ece690e82fb848621252"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VERTICAL_LEVEL_DOUBLE</span></span></span><a class="headerlink" href="#_CPPv4N13MDAL_DataType21VERTICAL_LEVEL_DOUBLEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Vertical level extrusion for particular mesh’s face in 3D Stacked Meshes (DataOnVolumes) </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13MDAL_DataType34FACE_INDEX_TO_VOLUME_INDEX_INTEGERE">
+<span id="_CPPv3N13MDAL_DataType34FACE_INDEX_TO_VOLUME_INDEX_INTEGERE"></span><span id="_CPPv2N13MDAL_DataType34FACE_INDEX_TO_VOLUME_INDEX_INTEGERE"></span><span class="target" id="mdal_8h_1a166f0313ba7ed0283008e91051fa3992a0ef7843a135f6d88e21db933700d479e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FACE_INDEX_TO_VOLUME_INDEX_INTEGER</span></span></span><a class="headerlink" href="#_CPPv4N13MDAL_DataType34FACE_INDEX_TO_VOLUME_INDEX_INTEGERE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The first index of 3D volume for particular mesh’s face in 3D Stacked Meshes (DataOnVolumes) </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13MDAL_DataType21SCALAR_VOLUMES_DOUBLEE">
+<span id="_CPPv3N13MDAL_DataType21SCALAR_VOLUMES_DOUBLEE"></span><span id="_CPPv2N13MDAL_DataType21SCALAR_VOLUMES_DOUBLEE"></span><span class="target" id="mdal_8h_1a166f0313ba7ed0283008e91051fa3992a90ef8fbab089357c17781e4cbf7247aa"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SCALAR_VOLUMES_DOUBLE</span></span></span><a class="headerlink" href="#_CPPv4N13MDAL_DataType21SCALAR_VOLUMES_DOUBLEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Double scalar values for volumes in 3D Stacked Meshes (DataOnVolumes) </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13MDAL_DataType24VECTOR_2D_VOLUMES_DOUBLEE">
+<span id="_CPPv3N13MDAL_DataType24VECTOR_2D_VOLUMES_DOUBLEE"></span><span id="_CPPv2N13MDAL_DataType24VECTOR_2D_VOLUMES_DOUBLEE"></span><span class="target" id="mdal_8h_1a166f0313ba7ed0283008e91051fa3992a3beec55ab2854c9562aa3ea011a9b987"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VECTOR_2D_VOLUMES_DOUBLE</span></span></span><a class="headerlink" href="#_CPPv4N13MDAL_DataType24VECTOR_2D_VOLUMES_DOUBLEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Double, double value for volumes in 3D Stacked Meshes (DataOnVolumes) </p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv412MDAL_Versionv">
+<span id="_CPPv312MDAL_Versionv"></span><span id="_CPPv212MDAL_Versionv"></span><span id="MDAL_Version"></span><span class="target" id="mdal_8h_1acf93f1460a9a95f8383713e4010e94f4"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_Version</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412MDAL_Versionv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns MDAL version. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv415MDAL_LastStatusv">
+<span id="_CPPv315MDAL_LastStatusv"></span><span id="_CPPv215MDAL_LastStatusv"></span><span id="MDAL_LastStatus"></span><span class="target" id="mdal_8h_1aa3c94a9e3152a96733ba2ee414063d3a"></span><a class="reference internal" href="#_CPPv411MDAL_Status" title="MDAL_Status"><span class="n"><span class="pre">MDAL_Status</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_LastStatus</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415MDAL_LastStatusv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns last status message. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv416MDAL_ResetStatusv">
+<span id="_CPPv316MDAL_ResetStatusv"></span><span id="_CPPv216MDAL_ResetStatusv"></span><span id="MDAL_ResetStatus"></span><span class="target" id="mdal_8h_1a6e9a2dedf55ea813f5d83eb238e01a32"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_ResetStatus</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416MDAL_ResetStatusv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Resets the last status message. </p>
+<p><dl class="simple">
+<dt><strong>Since</strong></dt><dd><p>MDAL 0.9.0 </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv414MDAL_SetStatus13MDAL_LogLevel11MDAL_StatusPKc">
+<span id="_CPPv314MDAL_SetStatus13MDAL_LogLevel11MDAL_StatusPKc"></span><span id="_CPPv214MDAL_SetStatus13MDAL_LogLevel11MDAL_StatusPKc"></span><span id="MDAL_SetStatus__MDAL_LogLevel.MDAL_Status.cCP"></span><span class="target" id="mdal_8h_1aa5c376e3d11a3b1767c16d208e62c6e6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_SetStatus</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv413MDAL_LogLevel" title="MDAL_LogLevel"><span class="n"><span class="pre">MDAL_LogLevel</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">Level</span></span>, <a class="reference internal" href="#_CPPv411MDAL_Status" title="MDAL_Status"><span class="n"><span class="pre">MDAL_Status</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">status</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">message</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414MDAL_SetStatus13MDAL_LogLevel11MDAL_StatusPKc" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Sets the last status message. </p>
+<p><dl class="simple">
+<dt><strong>Since</strong></dt><dd><p>MDAL 0.9.0 </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv422MDAL_SetLoggerCallback19MDAL_LoggerCallback">
+<span id="_CPPv322MDAL_SetLoggerCallback19MDAL_LoggerCallback"></span><span id="_CPPv222MDAL_SetLoggerCallback19MDAL_LoggerCallback"></span><span id="MDAL_SetLoggerCallback__MDAL_LoggerCallback"></span><span class="target" id="mdal_8h_1a48d1b836e41cde7567f5826751bc8dfe"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_SetLoggerCallback</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv419MDAL_LoggerCallback" title="MDAL_LoggerCallback"><span class="n"><span class="pre">MDAL_LoggerCallback</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">callback</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422MDAL_SetLoggerCallback19MDAL_LoggerCallback" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Sets custom callback for logging output. </p>
+<p>By default standard stdout is used as output. Calling this method with nullptr dissables logger ( logs will not be shown anywhere ). MDAL_LoggerCallback is a function accepting MDAL_LogLevel, MDAL_Status and const char* string <dl class="simple">
+<dt><strong>Since</strong></dt><dd><p>MDAL 0.6.0 </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv420MDAL_SetLogVerbosity13MDAL_LogLevel">
+<span id="_CPPv320MDAL_SetLogVerbosity13MDAL_LogLevel"></span><span id="_CPPv220MDAL_SetLogVerbosity13MDAL_LogLevel"></span><span id="MDAL_SetLogVerbosity__MDAL_LogLevel"></span><span class="target" id="mdal_8h_1a35bc67cb6c6694a56d7b3a308e7a861b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_SetLogVerbosity</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv413MDAL_LogLevel" title="MDAL_LogLevel"><span class="n"><span class="pre">MDAL_LogLevel</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">verbosity</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420MDAL_SetLogVerbosity13MDAL_LogLevel" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Sets maximum log level (verbosity) </p>
+<p>By default logger outputs errors. Log levels (low to high): Error, Warn, Info, Debug For example, if LogVerbosity is set to Warn, logger outputs errors and warnings. <dl class="simple">
+<dt><strong>Since</strong></dt><dd><p>MDAL 0.6.0 </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv416MDAL_driverCountv">
+<span id="_CPPv316MDAL_driverCountv"></span><span id="_CPPv216MDAL_driverCountv"></span><span id="MDAL_driverCount"></span><span class="target" id="mdal_8h_1a78330d834f1db82235d2bb95b1d5ec4f"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_driverCount</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416MDAL_driverCountv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>DRIVERS. </p>
+<p>Returns count of registed MDAL drivers </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv420MDAL_driverFromIndexi">
+<span id="_CPPv320MDAL_driverFromIndexi"></span><span id="_CPPv220MDAL_driverFromIndexi"></span><span id="MDAL_driverFromIndex__i"></span><span class="target" id="mdal_8h_1a6003973921e36332a3efac151904bf09"></span><a class="reference internal" href="#_CPPv412MDAL_DriverH" title="MDAL_DriverH"><span class="n"><span class="pre">MDAL_DriverH</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_driverFromIndex</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420MDAL_driverFromIndexi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns driver handle by index Do not free the returned pointer. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv419MDAL_driverFromNamePKc">
+<span id="_CPPv319MDAL_driverFromNamePKc"></span><span id="_CPPv219MDAL_driverFromNamePKc"></span><span id="MDAL_driverFromName__cCP"></span><span class="target" id="mdal_8h_1a7e55d35fedaad65bc601ee11fb3747df"></span><a class="reference internal" href="#_CPPv412MDAL_DriverH" title="MDAL_DriverH"><span class="n"><span class="pre">MDAL_DriverH</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_driverFromName</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419MDAL_driverFromNamePKc" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns driver handle by name Do not free the returned pointer. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv426MDAL_DR_meshLoadCapability12MDAL_DriverH">
+<span id="_CPPv326MDAL_DR_meshLoadCapability12MDAL_DriverH"></span><span id="_CPPv226MDAL_DR_meshLoadCapability12MDAL_DriverH"></span><span id="MDAL_DR_meshLoadCapability__MDAL_DriverH"></span><span class="target" id="mdal_8h_1aa06c25c0cb004c73711930f4ccc2c0cf"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_DR_meshLoadCapability</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412MDAL_DriverH" title="MDAL_DriverH"><span class="n"><span class="pre">MDAL_DriverH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">driver</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv426MDAL_DR_meshLoadCapability12MDAL_DriverH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns whether driver can be used to mesh if false, driver can be only used to load datasets to existing mesh. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv431MDAL_DR_writeDatasetsCapability12MDAL_DriverH17MDAL_DataLocation">
+<span id="_CPPv331MDAL_DR_writeDatasetsCapability12MDAL_DriverH17MDAL_DataLocation"></span><span id="_CPPv231MDAL_DR_writeDatasetsCapability12MDAL_DriverH17MDAL_DataLocation"></span><span id="MDAL_DR_writeDatasetsCapability__MDAL_DriverH.MDAL_DataLocation"></span><span class="target" id="mdal_8h_1afd6dcb04d0d4128bd0e43582413ef2ad"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_DR_writeDatasetsCapability</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412MDAL_DriverH" title="MDAL_DriverH"><span class="n"><span class="pre">MDAL_DriverH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">driver</span></span>, <a class="reference internal" href="#_CPPv417MDAL_DataLocation" title="MDAL_DataLocation"><span class="n"><span class="pre">MDAL_DataLocation</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">location</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv431MDAL_DR_writeDatasetsCapability12MDAL_DriverH17MDAL_DataLocation" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns whether driver has capability to write/edit dataset (groups) </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv427MDAL_DR_writeDatasetsSuffix12MDAL_DriverH">
+<span id="_CPPv327MDAL_DR_writeDatasetsSuffix12MDAL_DriverH"></span><span id="_CPPv227MDAL_DR_writeDatasetsSuffix12MDAL_DriverH"></span><span id="MDAL_DR_writeDatasetsSuffix__MDAL_DriverH"></span><span class="target" id="mdal_8h_1a575160e2258c12ad2796bb6111e669b9"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_DR_writeDatasetsSuffix</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412MDAL_DriverH" title="MDAL_DriverH"><span class="n"><span class="pre">MDAL_DriverH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">driver</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv427MDAL_DR_writeDatasetsSuffix12MDAL_DriverH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the file suffix used to write datasets on file not thread-safe and valid only till next call. </p>
+<p><dl class="simple">
+<dt><strong>Since</strong></dt><dd><p>MDAL 0.7.0 </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv422MDAL_DR_saveMeshSuffix12MDAL_DriverH">
+<span id="_CPPv322MDAL_DR_saveMeshSuffix12MDAL_DriverH"></span><span id="_CPPv222MDAL_DR_saveMeshSuffix12MDAL_DriverH"></span><span id="MDAL_DR_saveMeshSuffix__MDAL_DriverH"></span><span class="target" id="mdal_8h_1ae013efbab28a4cf34d78f3841ff36829"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_DR_saveMeshSuffix</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412MDAL_DriverH" title="MDAL_DriverH"><span class="n"><span class="pre">MDAL_DriverH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">driver</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422MDAL_DR_saveMeshSuffix12MDAL_DriverH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the file suffix used to save mesh frame on file not thread-safe and valid only till next call. </p>
+<p><dl class="simple">
+<dt><strong>Since</strong></dt><dd><p>MDAL 0.9.0 </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv426MDAL_DR_saveMeshCapability12MDAL_DriverH">
+<span id="_CPPv326MDAL_DR_saveMeshCapability12MDAL_DriverH"></span><span id="_CPPv226MDAL_DR_saveMeshCapability12MDAL_DriverH"></span><span id="MDAL_DR_saveMeshCapability__MDAL_DriverH"></span><span class="target" id="mdal_8h_1a936e1afc74d97baa5ce6329a6e63d1a7"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_DR_saveMeshCapability</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412MDAL_DriverH" title="MDAL_DriverH"><span class="n"><span class="pre">MDAL_DriverH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">driver</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv426MDAL_DR_saveMeshCapability12MDAL_DriverH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns whether driver has capability to save mesh. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv412MDAL_DR_name12MDAL_DriverH">
+<span id="_CPPv312MDAL_DR_name12MDAL_DriverH"></span><span id="_CPPv212MDAL_DR_name12MDAL_DriverH"></span><span id="MDAL_DR_name__MDAL_DriverH"></span><span class="target" id="mdal_8h_1a6c4faa1fe8e99a628746050015f9efa0"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_DR_name</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412MDAL_DriverH" title="MDAL_DriverH"><span class="n"><span class="pre">MDAL_DriverH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">driver</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412MDAL_DR_name12MDAL_DriverH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns name of MDAL driver not thread-safe and valid only till next call. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv416MDAL_DR_longName12MDAL_DriverH">
+<span id="_CPPv316MDAL_DR_longName12MDAL_DriverH"></span><span id="_CPPv216MDAL_DR_longName12MDAL_DriverH"></span><span id="MDAL_DR_longName__MDAL_DriverH"></span><span class="target" id="mdal_8h_1a269c5f8f3b7c6312c972aca78bc4b42a"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_DR_longName</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412MDAL_DriverH" title="MDAL_DriverH"><span class="n"><span class="pre">MDAL_DriverH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">driver</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416MDAL_DR_longName12MDAL_DriverH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns long name of MDAL driver not thread-safe and valid only till next call. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv415MDAL_DR_filters12MDAL_DriverH">
+<span id="_CPPv315MDAL_DR_filters12MDAL_DriverH"></span><span id="_CPPv215MDAL_DR_filters12MDAL_DriverH"></span><span id="MDAL_DR_filters__MDAL_DriverH"></span><span class="target" id="mdal_8h_1ac95d3d42bc923b914d8311ac58722948"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_DR_filters</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412MDAL_DriverH" title="MDAL_DriverH"><span class="n"><span class="pre">MDAL_DriverH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">driver</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415MDAL_DR_filters12MDAL_DriverH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns file filters that MDAL driver recognizes Filters are separated by ;;, e.g. </p>
+<p>*.abc;;*.def not thread-safe and valid only till next call </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv432MDAL_DR_faceVerticesMaximumCount12MDAL_DriverH">
+<span id="_CPPv332MDAL_DR_faceVerticesMaximumCount12MDAL_DriverH"></span><span id="_CPPv232MDAL_DR_faceVerticesMaximumCount12MDAL_DriverH"></span><span id="MDAL_DR_faceVerticesMaximumCount__MDAL_DriverH"></span><span class="target" id="mdal_8h_1a8519244c1102fed866becaa232fef83b"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_DR_faceVerticesMaximumCount</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412MDAL_DriverH" title="MDAL_DriverH"><span class="n"><span class="pre">MDAL_DriverH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">driver</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv432MDAL_DR_faceVerticesMaximumCount12MDAL_DriverH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the maximum number of vertices per face supported by the driver. </p>
+<p><dl class="simple">
+<dt><strong>Since</strong></dt><dd><p>MDAL 0.9.0 </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv413MDAL_LoadMeshPKc">
+<span id="_CPPv313MDAL_LoadMeshPKc"></span><span id="_CPPv213MDAL_LoadMeshPKc"></span><span id="MDAL_LoadMesh__cCP"></span><span class="target" id="mdal_8h_1af22ae71d43930ed2c737e81fe1eb981e"></span><a class="reference internal" href="#_CPPv410MDAL_MeshH" title="MDAL_MeshH"><span class="n"><span class="pre">MDAL_MeshH</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_LoadMesh</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">uri</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv413MDAL_LoadMeshPKc" title="Permalink to this definition"></a><br /></dt>
+<dd><p>MESH. </p>
+<p>Loads mesh file. On error see MDAL_LastStatus for error type This may effectively load whole mesh in-memory for some providers Caller must free memory with MDAL_CloseMesh() afterwards</p>
+<p>since MDAL 0.6.0 const char parameter is renamed to uri and might contain following: &lt;DriverName&gt;:”&lt;MeshFilePath&gt;”:&lt;SpecificMeshName or Id&gt; examples: Ugrid:”mesh.nc”:0, Ugrid:”mesh.nc”:mesh1d, “mesh.nc”:mesh1d, Ugrid:”mesh.nc”, “mesh.nc”, mesh.nc </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv414MDAL_MeshNamesPKc">
+<span id="_CPPv314MDAL_MeshNamesPKc"></span><span id="_CPPv214MDAL_MeshNamesPKc"></span><span id="MDAL_MeshNames__cCP"></span><span class="target" id="mdal_8h_1a37d2bc8b9c24cf7006694e4ff5914305"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_MeshNames</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">uri</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414MDAL_MeshNamesPKc" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns uris that the resource contains (mesh names) Uris are separated by ;; and have form &lt;DriverName&gt;:”&lt;MeshFilePath&gt;”[:&lt;SpecificMeshName&gt;] not thread-safe and valid only till next call. </p>
+<p>Parameter uri can be in format:</p>
+<p><ul class="simple">
+<li><p>&lt;drivername&gt;:”meshfile” - function then returns uris with provided driver and meshfile</p></li>
+<li><p>”meshfile” or meshfile - function then finds proper driver and returns uris with it</p></li>
+</ul>
+</p>
+<p>The uris can be used directly in MDAL_LoadMesh to load particular meshes</p>
+<p><dl class="simple">
+<dt><strong>Since</strong></dt><dd><p>MDAL 0.6.0 </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv414MDAL_CloseMesh10MDAL_MeshH">
+<span id="_CPPv314MDAL_CloseMesh10MDAL_MeshH"></span><span id="_CPPv214MDAL_CloseMesh10MDAL_MeshH"></span><span id="MDAL_CloseMesh__MDAL_MeshH"></span><span class="target" id="mdal_8h_1a56d2c8e91a3e4d16fc8b1411c68b51ec"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_CloseMesh</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv410MDAL_MeshH" title="MDAL_MeshH"><span class="n"><span class="pre">MDAL_MeshH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mesh</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414MDAL_CloseMesh10MDAL_MeshH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Closes mesh, frees the memory. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv415MDAL_CreateMesh12MDAL_DriverH">
+<span id="_CPPv315MDAL_CreateMesh12MDAL_DriverH"></span><span id="_CPPv215MDAL_CreateMesh12MDAL_DriverH"></span><span id="MDAL_CreateMesh__MDAL_DriverH"></span><span class="target" id="mdal_8h_1a8280d20fa3d0658938be5765a8de9e27"></span><a class="reference internal" href="#_CPPv410MDAL_MeshH" title="MDAL_MeshH"><span class="n"><span class="pre">MDAL_MeshH</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_CreateMesh</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412MDAL_DriverH" title="MDAL_DriverH"><span class="n"><span class="pre">MDAL_DriverH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">driver</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415MDAL_CreateMesh12MDAL_DriverH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Creates a empty mesh in memory. </p>
+<p><dl class="simple">
+<dt><strong>Since</strong></dt><dd><p>MDAL 0.7 </p>
+</dd>
+</dl>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>the mesh is editable (vertices and faces can be added, see MDAL_M_addVertices() and MDAL_M_addFaces()), and can be saved with MDAL_SaveMesh()</p>
+</div>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv413MDAL_SaveMesh10MDAL_MeshHPKcPKc">
+<span id="_CPPv313MDAL_SaveMesh10MDAL_MeshHPKcPKc"></span><span id="_CPPv213MDAL_SaveMesh10MDAL_MeshHPKcPKc"></span><span id="MDAL_SaveMesh__MDAL_MeshH.cCP.cCP"></span><span class="target" id="mdal_8h_1acbf5bd1e69ec2b0f4f7282dfc3144075"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_SaveMesh</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv410MDAL_MeshH" title="MDAL_MeshH"><span class="n"><span class="pre">MDAL_MeshH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mesh</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">meshFile</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">driver</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv413MDAL_SaveMesh10MDAL_MeshHPKcPKc" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Saves mesh (only mesh structure) on a file with the specified driver. </p>
+<p>On error see MDAL_LastStatus for error type. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv420MDAL_SaveMeshWithUri10MDAL_MeshHPKc">
+<span id="_CPPv320MDAL_SaveMeshWithUri10MDAL_MeshHPKc"></span><span id="_CPPv220MDAL_SaveMeshWithUri10MDAL_MeshHPKc"></span><span id="MDAL_SaveMeshWithUri__MDAL_MeshH.cCP"></span><span class="target" id="mdal_8h_1a11c7f39c9a38d17652db79d1a637fe3c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_SaveMeshWithUri</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv410MDAL_MeshH" title="MDAL_MeshH"><span class="n"><span class="pre">MDAL_MeshH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mesh</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">uri</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420MDAL_SaveMeshWithUri10MDAL_MeshHPKc" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Saves mesh (only mesh structure) on a file with an uri. </p>
+<p>On error see MDAL_LastStatus for error type.</p>
+<p>uri has form &lt;DriverName&gt;:”&lt;MeshFilePath&gt;”[:&lt;SpecificMeshName&gt;] examples: Ugrid:”mesh.nc”:0, Ugrid:”mesh.nc”:mesh2d, Ugrid:”mesh.nc”</p>
+<p>since MDAL 0.9 </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv417MDAL_M_projection10MDAL_MeshH">
+<span id="_CPPv317MDAL_M_projection10MDAL_MeshH"></span><span id="_CPPv217MDAL_M_projection10MDAL_MeshH"></span><span id="MDAL_M_projection__MDAL_MeshH"></span><span class="target" id="mdal_8h_1af8f10f68c22aaf02b0cde86873d4c77c"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_M_projection</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv410MDAL_MeshH" title="MDAL_MeshH"><span class="n"><span class="pre">MDAL_MeshH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mesh</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417MDAL_M_projection10MDAL_MeshH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns mesh projection not thread-safe and valid only till next call. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv420MDAL_M_setProjection10MDAL_MeshHPKc">
+<span id="_CPPv320MDAL_M_setProjection10MDAL_MeshHPKc"></span><span id="_CPPv220MDAL_M_setProjection10MDAL_MeshHPKc"></span><span id="MDAL_M_setProjection__MDAL_MeshH.cCP"></span><span class="target" id="mdal_8h_1a774dc6f00778f3983a81d66e97fe152e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_M_setProjection</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv410MDAL_MeshH" title="MDAL_MeshH"><span class="n"><span class="pre">MDAL_MeshH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mesh</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">projection</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420MDAL_M_setProjection10MDAL_MeshHPKc" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Sets mesh projection not thread-safe and valid only till next call. </p>
+<p><dl class="simple">
+<dt><strong>Since</strong></dt><dd><p>MDAL 0.7 </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv413MDAL_M_extent10MDAL_MeshHPdPdPdPd">
+<span id="_CPPv313MDAL_M_extent10MDAL_MeshHPdPdPdPd"></span><span id="_CPPv213MDAL_M_extent10MDAL_MeshHPdPdPdPd"></span><span id="MDAL_M_extent__MDAL_MeshH.doubleP.doubleP.doubleP.doubleP"></span><span class="target" id="mdal_8h_1aa7c7dc06304b46859e58feca15da7f5e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_M_extent</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv410MDAL_MeshH" title="MDAL_MeshH"><span class="n"><span class="pre">MDAL_MeshH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mesh</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">minX</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">maxX</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">minY</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">maxY</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv413MDAL_M_extent10MDAL_MeshHPdPdPdPd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns mesh extent in native projection Returns NaN on error. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv418MDAL_M_addVertices10MDAL_MeshHiPd">
+<span id="_CPPv318MDAL_M_addVertices10MDAL_MeshHiPd"></span><span id="_CPPv218MDAL_M_addVertices10MDAL_MeshHiPd"></span><span id="MDAL_M_addVertices__MDAL_MeshH.i.doubleP"></span><span class="target" id="mdal_8h_1a94ccc578b7287ef336e046e1aae0402a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_M_addVertices</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv410MDAL_MeshH" title="MDAL_MeshH"><span class="n"><span class="pre">MDAL_MeshH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mesh</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">vertexCount</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">coordinates</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418MDAL_M_addVertices10MDAL_MeshHiPd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Adds vertices to the mesh. </p>
+<p><dl class="simple">
+<dt><strong>Since</strong></dt><dd><p>MDAL 0.7 </p>
+</dd>
+</dl>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>to avoid incompatible datasets, adding faces removes all the existing dataset group</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> – the mesh which the vertices are added </p></li>
+<li><p><strong>vertexCount</strong> – the count of vertices </p></li>
+<li><p><strong>coordinates</strong> – coordinates of vertices (x0,y0,z0,x1,y1,z1,…,xn,yn,zn)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv415MDAL_M_addFaces10MDAL_MeshHiPiPi">
+<span id="_CPPv315MDAL_M_addFaces10MDAL_MeshHiPiPi"></span><span id="_CPPv215MDAL_M_addFaces10MDAL_MeshHiPiPi"></span><span id="MDAL_M_addFaces__MDAL_MeshH.i.iP.iP"></span><span class="target" id="mdal_8h_1a508daa54b4874907620a335579cef4f6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_M_addFaces</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv410MDAL_MeshH" title="MDAL_MeshH"><span class="n"><span class="pre">MDAL_MeshH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mesh</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">faceCount</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">faceSizes</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">vertexIndices</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415MDAL_M_addFaces10MDAL_MeshHiPiPi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Adds faces to the mesh. </p>
+<p><dl class="simple">
+<dt><strong>Since</strong></dt><dd><p>MDAL 0.7 </p>
+</dd>
+</dl>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>to avoid incompatible datasets, adding faces removes all the existing dataset group</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> – the mesh which the faces are added </p></li>
+<li><p><strong>faceCount</strong> – the count of faces </p></li>
+<li><p><strong>faceSizes</strong> – a pointer to an array of integer containing the number of vertices per each faces </p></li>
+<li><p><strong>vertexIndices</strong> – a pointer to an array of integer containing the indices of vertices of each faces</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv415MDAL_M_addEdges10MDAL_MeshHiPiPi">
+<span id="_CPPv315MDAL_M_addEdges10MDAL_MeshHiPiPi"></span><span id="_CPPv215MDAL_M_addEdges10MDAL_MeshHiPiPi"></span><span id="MDAL_M_addEdges__MDAL_MeshH.i.iP.iP"></span><span class="target" id="mdal_8h_1a6bad39a9cb61b9db156810bdc1e0e856"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_M_addEdges</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv410MDAL_MeshH" title="MDAL_MeshH"><span class="n"><span class="pre">MDAL_MeshH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mesh</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">edgesCount</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">startVertexIndices</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">endVertexIndices</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415MDAL_M_addEdges10MDAL_MeshHiPiPi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Adds edges to the mesh. </p>
+<p><dl class="simple">
+<dt><strong>Since</strong></dt><dd><p>MDAL 0.9.0 </p>
+</dd>
+</dl>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>to avoid incompatible datasets, adding edges removes all the existing dataset group</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> – the mesh which the faces are added </p></li>
+<li><p><strong>edgeCount</strong> – the count of edges </p></li>
+<li><p><strong>startVertexIndices</strong> – must be allocated to edgesCount items to store start vertex indices for edges </p></li>
+<li><p><strong>endVertexIndices</strong> – must be allocated to edgesCount items to store end vertex indices for edges</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv418MDAL_M_vertexCount10MDAL_MeshH">
+<span id="_CPPv318MDAL_M_vertexCount10MDAL_MeshH"></span><span id="_CPPv218MDAL_M_vertexCount10MDAL_MeshH"></span><span id="MDAL_M_vertexCount__MDAL_MeshH"></span><span class="target" id="mdal_8h_1a000a4793cfa6b3f2da9a6653b1f84b8e"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_M_vertexCount</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv410MDAL_MeshH" title="MDAL_MeshH"><span class="n"><span class="pre">MDAL_MeshH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mesh</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418MDAL_M_vertexCount10MDAL_MeshH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns vertex count for the mesh. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv416MDAL_M_edgeCount10MDAL_MeshH">
+<span id="_CPPv316MDAL_M_edgeCount10MDAL_MeshH"></span><span id="_CPPv216MDAL_M_edgeCount10MDAL_MeshH"></span><span id="MDAL_M_edgeCount__MDAL_MeshH"></span><span class="target" id="mdal_8h_1af9baff5b8bcd2fea25a96f3c6ad4b1ab"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_M_edgeCount</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv410MDAL_MeshH" title="MDAL_MeshH"><span class="n"><span class="pre">MDAL_MeshH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mesh</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416MDAL_M_edgeCount10MDAL_MeshH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns edge count for the mesh. </p>
+<p><dl class="simple">
+<dt><strong>Since</strong></dt><dd><p>MDAL 0.6.0 </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv416MDAL_M_faceCount10MDAL_MeshH">
+<span id="_CPPv316MDAL_M_faceCount10MDAL_MeshH"></span><span id="_CPPv216MDAL_M_faceCount10MDAL_MeshH"></span><span id="MDAL_M_faceCount__MDAL_MeshH"></span><span class="target" id="mdal_8h_1a3abb62ba6f250e7a3433e9e5a0d1ee40"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_M_faceCount</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv410MDAL_MeshH" title="MDAL_MeshH"><span class="n"><span class="pre">MDAL_MeshH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mesh</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416MDAL_M_faceCount10MDAL_MeshH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns face count for the mesh. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv431MDAL_M_faceVerticesMaximumCount10MDAL_MeshH">
+<span id="_CPPv331MDAL_M_faceVerticesMaximumCount10MDAL_MeshH"></span><span id="_CPPv231MDAL_M_faceVerticesMaximumCount10MDAL_MeshH"></span><span id="MDAL_M_faceVerticesMaximumCount__MDAL_MeshH"></span><span class="target" id="mdal_8h_1a6176a6faf2542565b094d0ceff88bcd6"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_M_faceVerticesMaximumCount</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv410MDAL_MeshH" title="MDAL_MeshH"><span class="n"><span class="pre">MDAL_MeshH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mesh</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv431MDAL_M_faceVerticesMaximumCount10MDAL_MeshH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns maximum number of vertices per face for this mesh, can consist of, e.g. </p>
+<p>4 for regular quad mesh. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv419MDAL_M_LoadDatasets10MDAL_MeshHPKc">
+<span id="_CPPv319MDAL_M_LoadDatasets10MDAL_MeshHPKc"></span><span id="_CPPv219MDAL_M_LoadDatasets10MDAL_MeshHPKc"></span><span id="MDAL_M_LoadDatasets__MDAL_MeshH.cCP"></span><span class="target" id="mdal_8h_1a45d5bc2680e1a69d3535f5844dba980d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_M_LoadDatasets</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv410MDAL_MeshH" title="MDAL_MeshH"><span class="n"><span class="pre">MDAL_MeshH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mesh</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">datasetFile</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419MDAL_M_LoadDatasets10MDAL_MeshHPKc" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Loads dataset file. </p>
+<p>On error see MDAL_LastStatus for error type. This may effectively load whole dataset in-memory for some providers Datasets will be closed automatically on mesh destruction or memory can be freed manually with MDAL_CloseDataset if needed </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv420MDAL_M_metadataCount10MDAL_MeshH">
+<span id="_CPPv320MDAL_M_metadataCount10MDAL_MeshH"></span><span id="_CPPv220MDAL_M_metadataCount10MDAL_MeshH"></span><span id="MDAL_M_metadataCount__MDAL_MeshH"></span><span class="target" id="mdal_8h_1abeb49fb4d8c9933f08c78e7b4dcb4b5e"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_M_metadataCount</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv410MDAL_MeshH" title="MDAL_MeshH"><span class="n"><span class="pre">MDAL_MeshH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mesh</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420MDAL_M_metadataCount10MDAL_MeshH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns number of metadata values. </p>
+<p><dl class="simple">
+<dt><strong>Since</strong></dt><dd><p>MDAL 0.9.0 </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv418MDAL_M_metadataKey10MDAL_MeshHi">
+<span id="_CPPv318MDAL_M_metadataKey10MDAL_MeshHi"></span><span id="_CPPv218MDAL_M_metadataKey10MDAL_MeshHi"></span><span id="MDAL_M_metadataKey__MDAL_MeshH.i"></span><span class="target" id="mdal_8h_1ab2858037c1f07a9ebc76357262a6e95c"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_M_metadataKey</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv410MDAL_MeshH" title="MDAL_MeshH"><span class="n"><span class="pre">MDAL_MeshH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mesh</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418MDAL_M_metadataKey10MDAL_MeshHi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns mesh metadata key not thread-safe and valid only till next call. </p>
+<p><dl class="simple">
+<dt><strong>Since</strong></dt><dd><p>MDAL 0.9.0 </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv420MDAL_M_metadataValue10MDAL_MeshHi">
+<span id="_CPPv320MDAL_M_metadataValue10MDAL_MeshHi"></span><span id="_CPPv220MDAL_M_metadataValue10MDAL_MeshHi"></span><span id="MDAL_M_metadataValue__MDAL_MeshH.i"></span><span class="target" id="mdal_8h_1a36e6948fc86b75b01e8b08fc18b9ef30"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_M_metadataValue</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv410MDAL_MeshH" title="MDAL_MeshH"><span class="n"><span class="pre">MDAL_MeshH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mesh</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420MDAL_M_metadataValue10MDAL_MeshHi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns mesh metadata value not thread-safe and valid only till next call. </p>
+<p><dl class="simple">
+<dt><strong>Since</strong></dt><dd><p>MDAL 0.9.0 </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv418MDAL_M_setMetadata10MDAL_MeshHPKcPKc">
+<span id="_CPPv318MDAL_M_setMetadata10MDAL_MeshHPKcPKc"></span><span id="_CPPv218MDAL_M_setMetadata10MDAL_MeshHPKcPKc"></span><span id="MDAL_M_setMetadata__MDAL_MeshH.cCP.cCP"></span><span class="target" id="mdal_8h_1af32624d3e6963f0c53441b23cb15a145"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_M_setMetadata</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv410MDAL_MeshH" title="MDAL_MeshH"><span class="n"><span class="pre">MDAL_MeshH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mesh</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">key</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">val</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418MDAL_M_setMetadata10MDAL_MeshHPKcPKc" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Adds new metadata to the mesh. </p>
+<p><dl class="simple">
+<dt><strong>Since</strong></dt><dd><p>MDAL 0.9.0 </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv424MDAL_M_datasetGroupCount10MDAL_MeshH">
+<span id="_CPPv324MDAL_M_datasetGroupCount10MDAL_MeshH"></span><span id="_CPPv224MDAL_M_datasetGroupCount10MDAL_MeshH"></span><span id="MDAL_M_datasetGroupCount__MDAL_MeshH"></span><span class="target" id="mdal_8h_1a9b2863efb602898de9ad0e76bbeb9b70"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_M_datasetGroupCount</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv410MDAL_MeshH" title="MDAL_MeshH"><span class="n"><span class="pre">MDAL_MeshH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mesh</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv424MDAL_M_datasetGroupCount10MDAL_MeshH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns dataset groups count. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv419MDAL_M_datasetGroup10MDAL_MeshHi">
+<span id="_CPPv319MDAL_M_datasetGroup10MDAL_MeshHi"></span><span id="_CPPv219MDAL_M_datasetGroup10MDAL_MeshHi"></span><span id="MDAL_M_datasetGroup__MDAL_MeshH.i"></span><span class="target" id="mdal_8h_1a59f6d16bf59f3d28584a6625646df235"></span><a class="reference internal" href="#_CPPv418MDAL_DatasetGroupH" title="MDAL_DatasetGroupH"><span class="n"><span class="pre">MDAL_DatasetGroupH</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_M_datasetGroup</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv410MDAL_MeshH" title="MDAL_MeshH"><span class="n"><span class="pre">MDAL_MeshH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mesh</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419MDAL_M_datasetGroup10MDAL_MeshHi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns dataset group handle. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv422MDAL_M_addDatasetGroup10MDAL_MeshHPKc17MDAL_DataLocationb12MDAL_DriverHPKc">
+<span id="_CPPv322MDAL_M_addDatasetGroup10MDAL_MeshHPKc17MDAL_DataLocationb12MDAL_DriverHPKc"></span><span id="_CPPv222MDAL_M_addDatasetGroup10MDAL_MeshHPKc17MDAL_DataLocationb12MDAL_DriverHPKc"></span><span id="MDAL_M_addDatasetGroup__MDAL_MeshH.cCP.MDAL_DataLocation.b.MDAL_DriverH.cCP"></span><span class="target" id="mdal_8h_1a765602e2f11cedb5329677b72f84b187"></span><a class="reference internal" href="#_CPPv418MDAL_DatasetGroupH" title="MDAL_DatasetGroupH"><span class="n"><span class="pre">MDAL_DatasetGroupH</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_M_addDatasetGroup</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv410MDAL_MeshH" title="MDAL_MeshH"><span class="n"><span class="pre">MDAL_MeshH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mesh</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">name</span></span>, <a class="reference internal" href="#_CPPv417MDAL_DataLocation" title="MDAL_DataLocation"><span class="n"><span class="pre">MDAL_DataLocation</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">dataLocation</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">hasScalarData</span></span>, <a class="reference internal" href="#_CPPv412MDAL_DriverH" title="MDAL_DriverH"><span class="n"><span class="pre">MDAL_DriverH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">driver</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">datasetGroupFile</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422MDAL_M_addDatasetGroup10MDAL_MeshHPKc17MDAL_DataLocationb12MDAL_DriverHPKc" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Adds empty (new) dataset group to the mesh This increases dataset group count MDAL_M_datasetGroupCount() by 1. </p>
+<p>The Dataset Group is opened in edit mode. To persist dataset group, call MDAL_G_closeEditMode();</p>
+<p>It is not possible to read and write to the same group at the same time. Finalize edits before reading.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> – mesh handle </p></li>
+<li><p><strong>driver</strong> – the driver to use for storing the data </p></li>
+<li><p><strong>name</strong> – dataset group name </p></li>
+<li><p><strong>dataLocation</strong> – location of data (face, vertex, volume) </p></li>
+<li><p><strong>hasScalarData</strong> – whether data is scalar (false = vector data) </p></li>
+<li><p><strong>datasetGroupFile</strong> – file to store the new dataset group </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>empty pointer if not possible to create group, otherwise handle to new group </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv417MDAL_M_driverName10MDAL_MeshH">
+<span id="_CPPv317MDAL_M_driverName10MDAL_MeshH"></span><span id="_CPPv217MDAL_M_driverName10MDAL_MeshH"></span><span id="MDAL_M_driverName__MDAL_MeshH"></span><span class="target" id="mdal_8h_1a7a50552e54f7fcb3f33392696e4115ef"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_M_driverName</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv410MDAL_MeshH" title="MDAL_MeshH"><span class="n"><span class="pre">MDAL_MeshH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mesh</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417MDAL_M_driverName10MDAL_MeshH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns name of MDAL driver not thread-safe and valid only till next call. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv421MDAL_M_vertexIterator10MDAL_MeshH">
+<span id="_CPPv321MDAL_M_vertexIterator10MDAL_MeshH"></span><span id="_CPPv221MDAL_M_vertexIterator10MDAL_MeshH"></span><span id="MDAL_M_vertexIterator__MDAL_MeshH"></span><span class="target" id="mdal_8h_1ae16f969d463afccc20cc057516fc29e8"></span><a class="reference internal" href="#_CPPv424MDAL_MeshVertexIteratorH" title="MDAL_MeshVertexIteratorH"><span class="n"><span class="pre">MDAL_MeshVertexIteratorH</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_M_vertexIterator</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv410MDAL_MeshH" title="MDAL_MeshH"><span class="n"><span class="pre">MDAL_MeshH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mesh</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421MDAL_M_vertexIterator10MDAL_MeshH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>MESH VERTICES. </p>
+<p>Returns iterator to the mesh vertices For some formats this may effectively load all vertices in-memory until iterator is closed </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv412MDAL_VI_next24MDAL_MeshVertexIteratorHiPd">
+<span id="_CPPv312MDAL_VI_next24MDAL_MeshVertexIteratorHiPd"></span><span id="_CPPv212MDAL_VI_next24MDAL_MeshVertexIteratorHiPd"></span><span id="MDAL_VI_next__MDAL_MeshVertexIteratorH.i.doubleP"></span><span class="target" id="mdal_8h_1a447cb04431400bd6cd73e343f2f17ff9"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_VI_next</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv424MDAL_MeshVertexIteratorH" title="MDAL_MeshVertexIteratorH"><span class="n"><span class="pre">MDAL_MeshVertexIteratorH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">iterator</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">verticesCount</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">coordinates</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412MDAL_VI_next24MDAL_MeshVertexIteratorHiPd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns vertices from iterator for the mesh. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>iterator</strong> – mesh data iterator </p></li>
+<li><p><strong>verticesCount</strong> – maximum number or vertices to be written to buffer </p></li>
+<li><p><strong>coordinates</strong> – must be allocated to 3* verticesCount items to store x1, y1, z1, …, xN, yN, zN coordinates </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>number of vertices written in the buffer </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv413MDAL_VI_close24MDAL_MeshVertexIteratorH">
+<span id="_CPPv313MDAL_VI_close24MDAL_MeshVertexIteratorH"></span><span id="_CPPv213MDAL_VI_close24MDAL_MeshVertexIteratorH"></span><span id="MDAL_VI_close__MDAL_MeshVertexIteratorH"></span><span class="target" id="mdal_8h_1a822711286f67a986398d495d334aee62"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_VI_close</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv424MDAL_MeshVertexIteratorH" title="MDAL_MeshVertexIteratorH"><span class="n"><span class="pre">MDAL_MeshVertexIteratorH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">iterator</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv413MDAL_VI_close24MDAL_MeshVertexIteratorH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Closes mesh data iterator, frees the memory. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv419MDAL_M_edgeIterator10MDAL_MeshH">
+<span id="_CPPv319MDAL_M_edgeIterator10MDAL_MeshH"></span><span id="_CPPv219MDAL_M_edgeIterator10MDAL_MeshH"></span><span id="MDAL_M_edgeIterator__MDAL_MeshH"></span><span class="target" id="mdal_8h_1a8ce60c2eca062c24fcc9e22437c8647a"></span><a class="reference internal" href="#_CPPv422MDAL_MeshEdgeIteratorH" title="MDAL_MeshEdgeIteratorH"><span class="n"><span class="pre">MDAL_MeshEdgeIteratorH</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_M_edgeIterator</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv410MDAL_MeshH" title="MDAL_MeshH"><span class="n"><span class="pre">MDAL_MeshH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mesh</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419MDAL_M_edgeIterator10MDAL_MeshH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>MESH EDGES. </p>
+<p>Returns iterator to the mesh edges For some formats this may effectively load all edges in-memory until iterator is closed</p>
+<p><dl class="simple">
+<dt><strong>Since</strong></dt><dd><p>MDAL 0.6.0 </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv412MDAL_EI_next22MDAL_MeshEdgeIteratorHiPiPi">
+<span id="_CPPv312MDAL_EI_next22MDAL_MeshEdgeIteratorHiPiPi"></span><span id="_CPPv212MDAL_EI_next22MDAL_MeshEdgeIteratorHiPiPi"></span><span id="MDAL_EI_next__MDAL_MeshEdgeIteratorH.i.iP.iP"></span><span class="target" id="mdal_8h_1a19ea3037e7a589a79d6174cc62428101"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_EI_next</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv422MDAL_MeshEdgeIteratorH" title="MDAL_MeshEdgeIteratorH"><span class="n"><span class="pre">MDAL_MeshEdgeIteratorH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">iterator</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">edgesCount</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">startVertexIndices</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">endVertexIndices</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412MDAL_EI_next22MDAL_MeshEdgeIteratorHiPiPi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns edges from iterator for the mesh. </p>
+<p><dl class="simple">
+<dt><strong>Since</strong></dt><dd><p>MDAL 0.6.0 </p>
+</dd>
+</dl>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>iterator</strong> – mesh data iterator </p></li>
+<li><p><strong>edgesCount</strong> – maximum number or edges to be written to buffer </p></li>
+<li><p><strong>startVertexIndices</strong> – must be allocated to edgesCount items to store start vertex indices for edges </p></li>
+<li><p><strong>endVertexIndices</strong> – must be allocated to edgesCount items to store end vertex indices for edges </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>number of vertices written in the buffer</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv413MDAL_EI_close22MDAL_MeshEdgeIteratorH">
+<span id="_CPPv313MDAL_EI_close22MDAL_MeshEdgeIteratorH"></span><span id="_CPPv213MDAL_EI_close22MDAL_MeshEdgeIteratorH"></span><span id="MDAL_EI_close__MDAL_MeshEdgeIteratorH"></span><span class="target" id="mdal_8h_1a91e0fc82034b70b8217eaf7d8648984d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_EI_close</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv422MDAL_MeshEdgeIteratorH" title="MDAL_MeshEdgeIteratorH"><span class="n"><span class="pre">MDAL_MeshEdgeIteratorH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">iterator</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv413MDAL_EI_close22MDAL_MeshEdgeIteratorH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Closes mesh data iterator, frees the memory. </p>
+<p><dl class="simple">
+<dt><strong>Since</strong></dt><dd><p>MDAL 0.6.0 </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv419MDAL_M_faceIterator10MDAL_MeshH">
+<span id="_CPPv319MDAL_M_faceIterator10MDAL_MeshH"></span><span id="_CPPv219MDAL_M_faceIterator10MDAL_MeshH"></span><span id="MDAL_M_faceIterator__MDAL_MeshH"></span><span class="target" id="mdal_8h_1ae2da33dfbb94402bbc8927a43cef57c3"></span><a class="reference internal" href="#_CPPv422MDAL_MeshFaceIteratorH" title="MDAL_MeshFaceIteratorH"><span class="n"><span class="pre">MDAL_MeshFaceIteratorH</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_M_faceIterator</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv410MDAL_MeshH" title="MDAL_MeshH"><span class="n"><span class="pre">MDAL_MeshH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mesh</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419MDAL_M_faceIterator10MDAL_MeshH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>MESH FACES. </p>
+<p>Returns iterator to the mesh faces For some formats this may effectively load all faces in-memory until iterator is closed </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv412MDAL_FI_next22MDAL_MeshFaceIteratorHiPiiPi">
+<span id="_CPPv312MDAL_FI_next22MDAL_MeshFaceIteratorHiPiiPi"></span><span id="_CPPv212MDAL_FI_next22MDAL_MeshFaceIteratorHiPiiPi"></span><span id="MDAL_FI_next__MDAL_MeshFaceIteratorH.i.iP.i.iP"></span><span class="target" id="mdal_8h_1a780b3eb9e0b603ef4d85a3e8c9076f02"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_FI_next</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv422MDAL_MeshFaceIteratorH" title="MDAL_MeshFaceIteratorH"><span class="n"><span class="pre">MDAL_MeshFaceIteratorH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">iterator</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">faceOffsetsBufferLen</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">faceOffsetsBuffer</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">vertexIndicesBufferLen</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">vertexIndicesBuffer</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412MDAL_FI_next22MDAL_MeshFaceIteratorHiPiiPi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns next faces from iterator for the mesh. </p>
+<p>Reading stops when vertexIndicesBuffer capacity is full / faceOffsetsBuffer capacity is full / end of faces is reached, whatever comes first</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>iterator</strong> – mesh data iterator </p></li>
+<li><p><strong>faceOffsetsBufferLen</strong> – size of faceOffsetsBuffer, minimum 1 </p></li>
+<li><p><strong>faceOffsetsBuffer</strong> – allocated array to store face offset in vertexIndicesBuffer for given face. To find number of vertices of face i, calculate faceOffsetsBuffer[i] - faceOffsetsBuffer[i-1] </p></li>
+<li><p><strong>vertexIndicesBufferLen</strong> – size of vertexIndicesBuffer, minimum is MDAL_M_faceVerticesMaximumCount() </p></li>
+<li><p><strong>vertexIndicesBuffer</strong> – writes vertex indexes for faces faceOffsetsBuffer[i-1] is index where the vertices for face i begins, </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>number of faces written in the buffer </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv413MDAL_FI_close22MDAL_MeshFaceIteratorH">
+<span id="_CPPv313MDAL_FI_close22MDAL_MeshFaceIteratorH"></span><span id="_CPPv213MDAL_FI_close22MDAL_MeshFaceIteratorH"></span><span id="MDAL_FI_close__MDAL_MeshFaceIteratorH"></span><span class="target" id="mdal_8h_1ae1245f2d9056a167fcdd20406b9f9406"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_FI_close</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv422MDAL_MeshFaceIteratorH" title="MDAL_MeshFaceIteratorH"><span class="n"><span class="pre">MDAL_MeshFaceIteratorH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">iterator</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv413MDAL_FI_close22MDAL_MeshFaceIteratorH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Closes mesh data iterator, frees the memory. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv411MDAL_G_mesh18MDAL_DatasetGroupH">
+<span id="_CPPv311MDAL_G_mesh18MDAL_DatasetGroupH"></span><span id="_CPPv211MDAL_G_mesh18MDAL_DatasetGroupH"></span><span id="MDAL_G_mesh__MDAL_DatasetGroupH"></span><span class="target" id="mdal_8h_1a2b2b3851e01bd3610d2fcab539f132cf"></span><a class="reference internal" href="#_CPPv410MDAL_MeshH" title="MDAL_MeshH"><span class="n"><span class="pre">MDAL_MeshH</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_G_mesh</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv418MDAL_DatasetGroupH" title="MDAL_DatasetGroupH"><span class="n"><span class="pre">MDAL_DatasetGroupH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">group</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411MDAL_G_mesh18MDAL_DatasetGroupH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>DATASET GROUPS. </p>
+<p>Returns dataset parent mesh </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv419MDAL_G_datasetCount18MDAL_DatasetGroupH">
+<span id="_CPPv319MDAL_G_datasetCount18MDAL_DatasetGroupH"></span><span id="_CPPv219MDAL_G_datasetCount18MDAL_DatasetGroupH"></span><span id="MDAL_G_datasetCount__MDAL_DatasetGroupH"></span><span class="target" id="mdal_8h_1a9702abbcad28ab38dcb74b8d1d4870aa"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_G_datasetCount</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv418MDAL_DatasetGroupH" title="MDAL_DatasetGroupH"><span class="n"><span class="pre">MDAL_DatasetGroupH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">group</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419MDAL_G_datasetCount18MDAL_DatasetGroupH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns dataset count in group. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv414MDAL_G_dataset18MDAL_DatasetGroupHi">
+<span id="_CPPv314MDAL_G_dataset18MDAL_DatasetGroupHi"></span><span id="_CPPv214MDAL_G_dataset18MDAL_DatasetGroupHi"></span><span id="MDAL_G_dataset__MDAL_DatasetGroupH.i"></span><span class="target" id="mdal_8h_1a58c2362f6dd17102542120f1004c663b"></span><a class="reference internal" href="#_CPPv413MDAL_DatasetH" title="MDAL_DatasetH"><span class="n"><span class="pre">MDAL_DatasetH</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_G_dataset</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv418MDAL_DatasetGroupH" title="MDAL_DatasetGroupH"><span class="n"><span class="pre">MDAL_DatasetGroupH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">group</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414MDAL_G_dataset18MDAL_DatasetGroupHi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns dataset handle. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv420MDAL_G_metadataCount18MDAL_DatasetGroupH">
+<span id="_CPPv320MDAL_G_metadataCount18MDAL_DatasetGroupH"></span><span id="_CPPv220MDAL_G_metadataCount18MDAL_DatasetGroupH"></span><span id="MDAL_G_metadataCount__MDAL_DatasetGroupH"></span><span class="target" id="mdal_8h_1a9a147a41d9fb93fc4059fca8575079f0"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_G_metadataCount</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv418MDAL_DatasetGroupH" title="MDAL_DatasetGroupH"><span class="n"><span class="pre">MDAL_DatasetGroupH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">group</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420MDAL_G_metadataCount18MDAL_DatasetGroupH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns number of metadata values. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv418MDAL_G_metadataKey18MDAL_DatasetGroupHi">
+<span id="_CPPv318MDAL_G_metadataKey18MDAL_DatasetGroupHi"></span><span id="_CPPv218MDAL_G_metadataKey18MDAL_DatasetGroupHi"></span><span id="MDAL_G_metadataKey__MDAL_DatasetGroupH.i"></span><span class="target" id="mdal_8h_1a76f80ea04e36c5dadd4ac23b0b7eba07"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_G_metadataKey</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv418MDAL_DatasetGroupH" title="MDAL_DatasetGroupH"><span class="n"><span class="pre">MDAL_DatasetGroupH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">group</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418MDAL_G_metadataKey18MDAL_DatasetGroupHi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns dataset metadata key not thread-safe and valid only till next call. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv420MDAL_G_metadataValue18MDAL_DatasetGroupHi">
+<span id="_CPPv320MDAL_G_metadataValue18MDAL_DatasetGroupHi"></span><span id="_CPPv220MDAL_G_metadataValue18MDAL_DatasetGroupHi"></span><span id="MDAL_G_metadataValue__MDAL_DatasetGroupH.i"></span><span class="target" id="mdal_8h_1aa361f892b40006ec6b5eb400ebb0dac6"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_G_metadataValue</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv418MDAL_DatasetGroupH" title="MDAL_DatasetGroupH"><span class="n"><span class="pre">MDAL_DatasetGroupH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">group</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420MDAL_G_metadataValue18MDAL_DatasetGroupHi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns dataset metadata value not thread-safe and valid only till next call. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv418MDAL_G_setMetadata18MDAL_DatasetGroupHPKcPKc">
+<span id="_CPPv318MDAL_G_setMetadata18MDAL_DatasetGroupHPKcPKc"></span><span id="_CPPv218MDAL_G_setMetadata18MDAL_DatasetGroupHPKcPKc"></span><span id="MDAL_G_setMetadata__MDAL_DatasetGroupH.cCP.cCP"></span><span class="target" id="mdal_8h_1a66e8814307a42a4e82ee8a80d89c59b1"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_G_setMetadata</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv418MDAL_DatasetGroupH" title="MDAL_DatasetGroupH"><span class="n"><span class="pre">MDAL_DatasetGroupH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">group</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">key</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">val</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418MDAL_G_setMetadata18MDAL_DatasetGroupHPKcPKc" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Adds new metadata to the group Group must be in edit mode MDAL_G_isInEditMode() </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv411MDAL_G_name18MDAL_DatasetGroupH">
+<span id="_CPPv311MDAL_G_name18MDAL_DatasetGroupH"></span><span id="_CPPv211MDAL_G_name18MDAL_DatasetGroupH"></span><span id="MDAL_G_name__MDAL_DatasetGroupH"></span><span class="target" id="mdal_8h_1afc60ab0822a4911209a50612ee09ac07"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_G_name</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv418MDAL_DatasetGroupH" title="MDAL_DatasetGroupH"><span class="n"><span class="pre">MDAL_DatasetGroupH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">group</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411MDAL_G_name18MDAL_DatasetGroupH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns dataset group name not thread-safe and valid only till next call. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv417MDAL_G_driverName18MDAL_DatasetGroupH">
+<span id="_CPPv317MDAL_G_driverName18MDAL_DatasetGroupH"></span><span id="_CPPv217MDAL_G_driverName18MDAL_DatasetGroupH"></span><span id="MDAL_G_driverName__MDAL_DatasetGroupH"></span><span class="target" id="mdal_8h_1a928071a4739ee42854e35929abd9fb5c"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_G_driverName</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv418MDAL_DatasetGroupH" title="MDAL_DatasetGroupH"><span class="n"><span class="pre">MDAL_DatasetGroupH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">group</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417MDAL_G_driverName18MDAL_DatasetGroupH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns name of MDAL driver not thread-safe and valid only till next call. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv420MDAL_G_hasScalarData18MDAL_DatasetGroupH">
+<span id="_CPPv320MDAL_G_hasScalarData18MDAL_DatasetGroupH"></span><span id="_CPPv220MDAL_G_hasScalarData18MDAL_DatasetGroupH"></span><span id="MDAL_G_hasScalarData__MDAL_DatasetGroupH"></span><span class="target" id="mdal_8h_1a426404c8aa6b855ddac8e1f0227643df"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_G_hasScalarData</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv418MDAL_DatasetGroupH" title="MDAL_DatasetGroupH"><span class="n"><span class="pre">MDAL_DatasetGroupH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">group</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420MDAL_G_hasScalarData18MDAL_DatasetGroupH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Whether dataset has scalar data associated. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv419MDAL_G_dataLocation18MDAL_DatasetGroupH">
+<span id="_CPPv319MDAL_G_dataLocation18MDAL_DatasetGroupH"></span><span id="_CPPv219MDAL_G_dataLocation18MDAL_DatasetGroupH"></span><span id="MDAL_G_dataLocation__MDAL_DatasetGroupH"></span><span class="target" id="mdal_8h_1a8ff75f10fad1f990d367779dfa123b5e"></span><a class="reference internal" href="#_CPPv417MDAL_DataLocation" title="MDAL_DataLocation"><span class="n"><span class="pre">MDAL_DataLocation</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_G_dataLocation</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv418MDAL_DatasetGroupH" title="MDAL_DatasetGroupH"><span class="n"><span class="pre">MDAL_DatasetGroupH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">group</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419MDAL_G_dataLocation18MDAL_DatasetGroupH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Whether dataset is on vertices. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv432MDAL_G_maximumVerticalLevelCount18MDAL_DatasetGroupH">
+<span id="_CPPv332MDAL_G_maximumVerticalLevelCount18MDAL_DatasetGroupH"></span><span id="_CPPv232MDAL_G_maximumVerticalLevelCount18MDAL_DatasetGroupH"></span><span id="MDAL_G_maximumVerticalLevelCount__MDAL_DatasetGroupH"></span><span class="target" id="mdal_8h_1ab3b79546cb951ad813f0c5986e02bcba"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_G_maximumVerticalLevelCount</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv418MDAL_DatasetGroupH" title="MDAL_DatasetGroupH"><span class="n"><span class="pre">MDAL_DatasetGroupH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">group</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv432MDAL_G_maximumVerticalLevelCount18MDAL_DatasetGroupH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns maximum number of vertical levels (for 3D meshes) </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv421MDAL_G_minimumMaximum18MDAL_DatasetGroupHPdPd">
+<span id="_CPPv321MDAL_G_minimumMaximum18MDAL_DatasetGroupHPdPd"></span><span id="_CPPv221MDAL_G_minimumMaximum18MDAL_DatasetGroupHPdPd"></span><span id="MDAL_G_minimumMaximum__MDAL_DatasetGroupH.doubleP.doubleP"></span><span class="target" id="mdal_8h_1abcb95f449ada07713714f146320e2b8c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_G_minimumMaximum</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv418MDAL_DatasetGroupH" title="MDAL_DatasetGroupH"><span class="n"><span class="pre">MDAL_DatasetGroupH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">group</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">min</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">max</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421MDAL_G_minimumMaximum18MDAL_DatasetGroupHPdPd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the minimum and maximum values of the group Returns NaN on error. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv417MDAL_G_addDataset18MDAL_DatasetGroupHdPKdPKi">
+<span id="_CPPv317MDAL_G_addDataset18MDAL_DatasetGroupHdPKdPKi"></span><span id="_CPPv217MDAL_G_addDataset18MDAL_DatasetGroupHdPKdPKi"></span><span id="MDAL_G_addDataset__MDAL_DatasetGroupH.double.doubleCP.iCP"></span><span class="target" id="mdal_8h_1a241b5f82e0f5072c93c06ba250c125bd"></span><a class="reference internal" href="#_CPPv413MDAL_DatasetH" title="MDAL_DatasetH"><span class="n"><span class="pre">MDAL_DatasetH</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_G_addDataset</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv418MDAL_DatasetGroupH" title="MDAL_DatasetGroupH"><span class="n"><span class="pre">MDAL_DatasetGroupH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">group</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">time</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">values</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">active</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417MDAL_G_addDataset18MDAL_DatasetGroupHdPKdPKi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Adds empty (new) dataset to the group This increases dataset group count MDAL_G_datasetCount() by 1. </p>
+<p>The dataset is opened in edit mode. To persist dataset, call MDAL_G_closeEditMode() on parent group</p>
+<p>Minimum and maximum dataset values are automatically calculated</p>
+<p>Only for 2D datasets</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>group</strong> – parent group handle </p></li>
+<li><p><strong>time</strong> – time for dataset (hours) </p></li>
+<li><p><strong>values</strong> – For scalar data on vertices, the size must be vertex count For scalar data on faces, the size must be faces count For scalar data on edges, the size must be edges count For vector data on vertices, the size must be vertex count * 2 (x1, y1, x2, y2, …, xN, yN) For vector data on faces, the size must be faces count * 2 (x1, y1, x2, y2, …, xN, yN) For vector data on edges, the size must be edges count * 2 (x1, y1, x2, y2, …, xN, yN) </p></li>
+<li><p><strong>active</strong> – if null pointer, MDAL_D_hasActiveFlagCapability returns false. Otherwise size must be equal to face count. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>empty pointer if not possible to create dataset (e.g. group opened in read mode), otherwise handle to new dataset </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv419MDAL_G_addDataset3D18MDAL_DatasetGroupHdPKdPKiPKd">
+<span id="_CPPv319MDAL_G_addDataset3D18MDAL_DatasetGroupHdPKdPKiPKd"></span><span id="_CPPv219MDAL_G_addDataset3D18MDAL_DatasetGroupHdPKdPKiPKd"></span><span id="MDAL_G_addDataset3D__MDAL_DatasetGroupH.double.doubleCP.iCP.doubleCP"></span><span class="target" id="mdal_8h_1ae86fac29bc2f671164d1947abe348303"></span><a class="reference internal" href="#_CPPv413MDAL_DatasetH" title="MDAL_DatasetH"><span class="n"><span class="pre">MDAL_DatasetH</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_G_addDataset3D</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv418MDAL_DatasetGroupH" title="MDAL_DatasetGroupH"><span class="n"><span class="pre">MDAL_DatasetGroupH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">group</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">time</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">values</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">verticalLevelCount</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">verticalExtrusions</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419MDAL_G_addDataset3D18MDAL_DatasetGroupHdPKdPKiPKd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Adds empty (new) 3D dataset to the group This increases dataset group count MDAL_G_datasetCount() by 1. </p>
+<p>The dataset is opened in edit mode. To persist dataset, call MDAL_G_closeEditMode() on parent group</p>
+<p>Minimum and maximum dataset values are automatically calculated</p>
+<p>Only for 3D datasets</p>
+<p><dl class="simple">
+<dt><strong>Since</strong></dt><dd><p>MDAL 0.9.0 </p>
+</dd>
+</dl>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>group</strong> – parent group handle </p></li>
+<li><p><strong>time</strong> – time for dataset (hours) </p></li>
+<li><p><strong>values</strong> – For scalar data, the size must be volume count For vector data , the size must be volume count * 2 (x1, y1, x2, y2, …, xN, yN) </p></li>
+<li><p><strong>verticalLevelCount</strong> – Int Array holding the number of vertical levels for each face. Size must be the face count </p></li>
+<li><p><strong>verticalExtrusion</strong> – Double Array holding the vertical level values for the voxels Size must be Face count + Volume count </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>empty pointer if not possible to create dataset (e.g. group opened in read mode), otherwise handle to new dataset</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv419MDAL_G_isInEditMode18MDAL_DatasetGroupH">
+<span id="_CPPv319MDAL_G_isInEditMode18MDAL_DatasetGroupH"></span><span id="_CPPv219MDAL_G_isInEditMode18MDAL_DatasetGroupH"></span><span id="MDAL_G_isInEditMode__MDAL_DatasetGroupH"></span><span class="target" id="mdal_8h_1a4c17549491a460a1dfd804ebfb33bd79"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_G_isInEditMode</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv418MDAL_DatasetGroupH" title="MDAL_DatasetGroupH"><span class="n"><span class="pre">MDAL_DatasetGroupH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">group</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419MDAL_G_isInEditMode18MDAL_DatasetGroupH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns whether dataset group is in edit mode. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv420MDAL_G_closeEditMode18MDAL_DatasetGroupH">
+<span id="_CPPv320MDAL_G_closeEditMode18MDAL_DatasetGroupH"></span><span id="_CPPv220MDAL_G_closeEditMode18MDAL_DatasetGroupH"></span><span id="MDAL_G_closeEditMode__MDAL_DatasetGroupH"></span><span class="target" id="mdal_8h_1a59d4897e25062af52d25f690c4957035"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_G_closeEditMode</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv418MDAL_DatasetGroupH" title="MDAL_DatasetGroupH"><span class="n"><span class="pre">MDAL_DatasetGroupH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">group</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420MDAL_G_closeEditMode18MDAL_DatasetGroupH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Close edit mode for group and all its datasets. </p>
+<p>This may effectively write the data to the files and/or reopen the file in read-only mode</p>
+<p>When closed, minimum and maximum dataset group values are automatically calculated </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv420MDAL_G_referenceTime18MDAL_DatasetGroupH">
+<span id="_CPPv320MDAL_G_referenceTime18MDAL_DatasetGroupH"></span><span id="_CPPv220MDAL_G_referenceTime18MDAL_DatasetGroupH"></span><span id="MDAL_G_referenceTime__MDAL_DatasetGroupH"></span><span class="target" id="mdal_8h_1a6a34375849dab1ff42786b19c7b83535"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_G_referenceTime</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv418MDAL_DatasetGroupH" title="MDAL_DatasetGroupH"><span class="n"><span class="pre">MDAL_DatasetGroupH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">group</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420MDAL_G_referenceTime18MDAL_DatasetGroupH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns reference time for dataset group expressed in date with ISO8601 format, return “” if reference time is not defined. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv423MDAL_G_setReferenceTime18MDAL_DatasetGroupHPKc">
+<span id="_CPPv323MDAL_G_setReferenceTime18MDAL_DatasetGroupHPKc"></span><span id="_CPPv223MDAL_G_setReferenceTime18MDAL_DatasetGroupHPKc"></span><span id="MDAL_G_setReferenceTime__MDAL_DatasetGroupH.cCP"></span><span class="target" id="mdal_8h_1a7ac64e594ea1a1972a1466336bf3c10e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_G_setReferenceTime</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv418MDAL_DatasetGroupH" title="MDAL_DatasetGroupH"><span class="n"><span class="pre">MDAL_DatasetGroupH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">group</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">referenceTimeISO8601</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv423MDAL_G_setReferenceTime18MDAL_DatasetGroupHPKc" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Sets reference time for dataset group expressed in date with ISO8601 format. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv417MDAL_G_isTemporal18MDAL_DatasetGroupH">
+<span id="_CPPv317MDAL_G_isTemporal18MDAL_DatasetGroupH"></span><span id="_CPPv217MDAL_G_isTemporal18MDAL_DatasetGroupH"></span><span id="MDAL_G_isTemporal__MDAL_DatasetGroupH"></span><span class="target" id="mdal_8h_1af9ca0b42867b3ef61e6863f396e71409"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_G_isTemporal</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv418MDAL_DatasetGroupH" title="MDAL_DatasetGroupH"><span class="n"><span class="pre">MDAL_DatasetGroupH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">group</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417MDAL_G_isTemporal18MDAL_DatasetGroupH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns whether the dataset group is temporal, i.e. </p>
+<p>has time-related datasets</p>
+<p><dl class="simple">
+<dt><strong>Since</strong></dt><dd><p>MDAL 0.6.0 </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv410MDAL_G_uri18MDAL_DatasetGroupH">
+<span id="_CPPv310MDAL_G_uri18MDAL_DatasetGroupH"></span><span id="_CPPv210MDAL_G_uri18MDAL_DatasetGroupH"></span><span id="MDAL_G_uri__MDAL_DatasetGroupH"></span><span class="target" id="mdal_8h_1a6dce4d18d941dcae85e946721261bc16"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_G_uri</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv418MDAL_DatasetGroupH" title="MDAL_DatasetGroupH"><span class="n"><span class="pre">MDAL_DatasetGroupH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">group</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv410MDAL_G_uri18MDAL_DatasetGroupH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns dataset group uri not thread-safe and valid only till next call. </p>
+<p><dl class="simple">
+<dt><strong>Since</strong></dt><dd><p>MDAL 0.7.0 </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv412MDAL_D_group13MDAL_DatasetH">
+<span id="_CPPv312MDAL_D_group13MDAL_DatasetH"></span><span id="_CPPv212MDAL_D_group13MDAL_DatasetH"></span><span id="MDAL_D_group__MDAL_DatasetH"></span><span class="target" id="mdal_8h_1a5ae98754837b059df1366238538f6a61"></span><a class="reference internal" href="#_CPPv418MDAL_DatasetGroupH" title="MDAL_DatasetGroupH"><span class="n"><span class="pre">MDAL_DatasetGroupH</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_D_group</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv413MDAL_DatasetH" title="MDAL_DatasetH"><span class="n"><span class="pre">MDAL_DatasetH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">dataset</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412MDAL_D_group13MDAL_DatasetH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>DATASETS. </p>
+<p>Returns dataset parent group </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv411MDAL_D_time13MDAL_DatasetH">
+<span id="_CPPv311MDAL_D_time13MDAL_DatasetH"></span><span id="_CPPv211MDAL_D_time13MDAL_DatasetH"></span><span id="MDAL_D_time__MDAL_DatasetH"></span><span class="target" id="mdal_8h_1a89eb0fb26a268c1072ca164beeb432b8"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_D_time</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv413MDAL_DatasetH" title="MDAL_DatasetH"><span class="n"><span class="pre">MDAL_DatasetH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">dataset</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411MDAL_D_time13MDAL_DatasetH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns dataset time (hours) </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv419MDAL_D_volumesCount13MDAL_DatasetH">
+<span id="_CPPv319MDAL_D_volumesCount13MDAL_DatasetH"></span><span id="_CPPv219MDAL_D_volumesCount13MDAL_DatasetH"></span><span id="MDAL_D_volumesCount__MDAL_DatasetH"></span><span class="target" id="mdal_8h_1aba7e311c57365c9ecb69157372f7e335"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_D_volumesCount</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv413MDAL_DatasetH" title="MDAL_DatasetH"><span class="n"><span class="pre">MDAL_DatasetH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">dataset</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419MDAL_D_volumesCount13MDAL_DatasetH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns volumes count for the mesh (for 3D meshes) </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv432MDAL_D_maximumVerticalLevelCount13MDAL_DatasetH">
+<span id="_CPPv332MDAL_D_maximumVerticalLevelCount13MDAL_DatasetH"></span><span id="_CPPv232MDAL_D_maximumVerticalLevelCount13MDAL_DatasetH"></span><span id="MDAL_D_maximumVerticalLevelCount__MDAL_DatasetH"></span><span class="target" id="mdal_8h_1a2edcf7921683bbb675d4e9e9b09e2e98"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_D_maximumVerticalLevelCount</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv413MDAL_DatasetH" title="MDAL_DatasetH"><span class="n"><span class="pre">MDAL_DatasetH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">dataset</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv432MDAL_D_maximumVerticalLevelCount13MDAL_DatasetH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns maximum number of vertical levels (for 3D meshes) </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv417MDAL_D_valueCount13MDAL_DatasetH">
+<span id="_CPPv317MDAL_D_valueCount13MDAL_DatasetH"></span><span id="_CPPv217MDAL_D_valueCount13MDAL_DatasetH"></span><span id="MDAL_D_valueCount__MDAL_DatasetH"></span><span class="target" id="mdal_8h_1a22d1841cb5eb83214af2c27a512887e0"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_D_valueCount</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv413MDAL_DatasetH" title="MDAL_DatasetH"><span class="n"><span class="pre">MDAL_DatasetH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">dataset</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417MDAL_D_valueCount13MDAL_DatasetH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns number of values For dataset with data location DataOnVertices returns vertex count For dataset with data location DataOnFaces returns face count For dataset with data location DataOnVolumes returns volumes count For dataset with data location DataOnEdges returns edges count. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv414MDAL_D_isValid13MDAL_DatasetH">
+<span id="_CPPv314MDAL_D_isValid13MDAL_DatasetH"></span><span id="_CPPv214MDAL_D_isValid13MDAL_DatasetH"></span><span id="MDAL_D_isValid__MDAL_DatasetH"></span><span class="target" id="mdal_8h_1af6a8bad16acd83e8b47a48f8cba31169"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_D_isValid</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv413MDAL_DatasetH" title="MDAL_DatasetH"><span class="n"><span class="pre">MDAL_DatasetH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">dataset</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414MDAL_D_isValid13MDAL_DatasetH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns whether dataset is valid. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv430MDAL_D_hasActiveFlagCapability13MDAL_DatasetH">
+<span id="_CPPv330MDAL_D_hasActiveFlagCapability13MDAL_DatasetH"></span><span id="_CPPv230MDAL_D_hasActiveFlagCapability13MDAL_DatasetH"></span><span id="MDAL_D_hasActiveFlagCapability__MDAL_DatasetH"></span><span class="target" id="mdal_8h_1afb9d7a5df3de9a24c0dc8991f75d43d2"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_D_hasActiveFlagCapability</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv413MDAL_DatasetH" title="MDAL_DatasetH"><span class="n"><span class="pre">MDAL_DatasetH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">dataset</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv430MDAL_D_hasActiveFlagCapability13MDAL_DatasetH" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns whether dataset supports active flag for dataset faces. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv411MDAL_D_data13MDAL_DatasetHii13MDAL_DataTypePv">
+<span id="_CPPv311MDAL_D_data13MDAL_DatasetHii13MDAL_DataTypePv"></span><span id="_CPPv211MDAL_D_data13MDAL_DatasetHii13MDAL_DataTypePv"></span><span id="MDAL_D_data__MDAL_DatasetH.i.i.MDAL_DataType.voidP"></span><span class="target" id="mdal_8h_1a0da7a33adc86d28db7c1211c589b8a5a"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_D_data</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv413MDAL_DatasetH" title="MDAL_DatasetH"><span class="n"><span class="pre">MDAL_DatasetH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">dataset</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">indexStart</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">count</span></span>, <a class="reference internal" href="#_CPPv413MDAL_DataType" title="MDAL_DataType"><span class="n"><span class="pre">MDAL_DataType</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">dataType</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">buffer</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411MDAL_D_data13MDAL_DatasetHii13MDAL_DataTypePv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Populates buffer with values from the dataset for nodata, returned is numeric_limits&lt;double&gt;::quiet_NaN. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dataset</strong> – handle to dataset </p></li>
+<li><p><strong>indexStart</strong> – index of face/vertex to start reading of values to the buffer </p></li>
+<li><p><strong>count</strong> – number of values to be written to the buffer </p></li>
+<li><p><strong>dataType</strong> – type of values to be written to the buffer </p></li>
+<li><p><strong>buffer</strong> – output array to be populated with the values. must be already allocated For SCALAR_DOUBLE, the minimum size must be valuesCount * size_of(double) For VECTOR_2D_DOUBLE, the minimum size must be valuesCount * 2 * size_of(double). Values are returned as x1, y1, x2, y2, …, xN, yN For ACTIVE_INTEGER, the minimum size must be valuesCount * size_of(int) For VERTICAL_LEVEL_COUNT_INTEGER, the minimum size must be faceCount * size_of(int) For VERTICAL_LEVEL_DOUBLE, the minimum size must be (faceCount + volumesCount) * size_of(double) For FACE_INDEX_TO_VOLUME_INDEX_INTEGER, the minimum size must be faceCount * size_of(int) For SCALAR_VOLUMES_DOUBLE, the minimum size must be volumesCount * size_of(double) For VECTOR_2D_VOLUMES_DOUBLE, the minimum size must be 2 * volumesCount * size_of(double) </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>number of values written to buffer. If return value != count requested, see MDAL_LastStatus() for error type </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv421MDAL_D_minimumMaximum13MDAL_DatasetHPdPd">
+<span id="_CPPv321MDAL_D_minimumMaximum13MDAL_DatasetHPdPd"></span><span id="_CPPv221MDAL_D_minimumMaximum13MDAL_DatasetHPdPd"></span><span id="MDAL_D_minimumMaximum__MDAL_DatasetH.doubleP.doubleP"></span><span class="target" id="mdal_8h_1a2c7a8489c0ac868006aa28a190d5564d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MDAL_D_minimumMaximum</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv413MDAL_DatasetH" title="MDAL_DatasetH"><span class="n"><span class="pre">MDAL_DatasetH</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">dataset</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">min</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">max</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421MDAL_D_minimumMaximum13MDAL_DatasetHPdPd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the minimum and maximum values of the dataset Returns NaN on error. </p>
+</dd></dl>
+
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2020.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

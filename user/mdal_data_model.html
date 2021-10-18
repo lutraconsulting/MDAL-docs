@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MDAL Data Model &mdash; MDAL  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/mdal.css" type="text/css" />
+    <link rel="canonical" href="https://mdal.xyzuser/mdal_data_model.html"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Configuration options" href="configoptions.html" />
+    <link rel="prev" title="User oriented documentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+            <a href="../index.html">
+            <img src="../_static/LogoHorizontal_01_color_400x123.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../programs/index.html">Programs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../drivers/index.html">MDAL drivers</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">User</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">MDAL Data Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#data-model">Data Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mesh-examples">Mesh-examples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="configoptions.html">Configuration options</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development/index.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../community.html">Community</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">How to contribute?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: white" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MDAL</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">User oriented documentation</a> &raquo;</li>
+      <li>MDAL Data Model</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/lutraconsulting/mdal/edit//master/docs/source/user/mdal_data_model.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="index.html" class="btn btn-neutral float-left" title="User oriented documentation" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="configoptions.html" class="btn btn-neutral float-right" title="Configuration options" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mdal-data-model">
+<span id="id1"></span><h1>MDAL Data Model<a class="headerlink" href="#mdal-data-model" title="Permalink to this headline"></a></h1>
+<section id="data-model">
+<h2>Data Model<a class="headerlink" href="#data-model" title="Permalink to this headline"></a></h2>
+<p>In our context, a mesh is a collection of vertices, edges and faces in 2D or 3D space:</p>
+<ol class="arabic simple">
+<li><p>Vertices - XY(Z) points (in the layer’s coordinate reference system).</p></li>
+<li><p>Edges - connect pairs of vertices.</p></li>
+<li><p>Faces - sets of edges forming a closed shape - typically triangles or quadrilaterals (quads), rarely polygons with higher number of vertices.</p></li>
+</ol>
+</section>
+<section id="mesh-examples">
+<h2>Mesh-examples<a class="headerlink" href="#mesh-examples" title="Permalink to this headline"></a></h2>
+<p>Mesh gives us information about the spatial structure. In addition to the mesh we have datasets that assign a value to every vertex. For example, ice cap thickness at particular moment of time. A single file may contain multiple datasets - typically multiple quantities (e.g. water depth, water flow) that may be varying in time (time being represented in discrete timesteps, so each quantity may have N arrays, one for each timestep). Datasets do not have to vary in time (e.g. maximum water depth over the whole simulation).</p>
+<p>Here is an example of a triangular mesh with numbered vertices:</p>
+<p>We can visualize the data by assigning colors to values (similarly to how it is done with “Singleband pseudocolor” raster rendering) and interpolating data between vertices according to the mesh topology. It is common that some quantities are 2D vectors rather than being simple scalar values (e.g. wind direction). For such quantities it is very desired to display arrows indicating vector direction.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="User oriented documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="configoptions.html" class="btn btn-neutral float-right" title="Configuration options" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2020.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
